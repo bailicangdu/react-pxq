@@ -20,10 +20,10 @@ react + react-router + redux + immutable + less + ES6 + webpack + fetch + 按需
  npm run dist （发布生产版本）
 ```
 
-## 总结:kissing_closed_eyes:：
+## 总结:blush:：
 ```
 一、Virtual DOM是react的标志。虚拟DOM之所以快有两点原因：1、Javascript运行很快  2、操作真实DOM很慢。
-都知道DOM操作起来很慢很耗CPU，所以react将DOM直接写进js，再也没有html文件，所有的DOM都在js中生成并渲染。
+DOM操作起来很慢很耗CPU，所以react将DOM直接写进js，再也没有html文件，所有的DOM都在js中生成并渲染。
 我们不需要控制DOM如何生成如何渲染，react已经替我们做好了一切，我们只需要告诉它想要的效果，它会用最好的方法将效果渲染出来。
 这就是虚拟DOM，它不直接对DOM进行操作，只操作存在于内存中的DOM，并用最佳的方式渲染出来。
 
@@ -33,14 +33,14 @@ redux相当于在react的最顶层加了一个数据层，所有需要共用的�
 
 三、ES6很强大，并且经过babel转换后兼容性很好。
 
-四、webpack可以极大的提高工作效率，各种需要的效果也都有，尤其是webpack-dev-server中proxy的反向代理，
+四、webpack可以极大的提高工作效率，各种需要的功能都有，尤其是webpack-dev-server中proxy的反向代理，
 实现前后端分离开发，很实用。
 
 五、immutable定义了一种数据类型，一旦定义就不能更改，所有对数据的操作都会生成一个新的数据。
 它可以极大的提高react的速度，但是它改变了数据结构，容易坑。demo是在写完之后才加上immutable，
-所以每改变以前的state为immutable，都会影响其他的数据变化，很麻烦。
+所以每次改变以前的state为immutable，都会影响其他的数据变化，很麻烦。
 
-六、demo中很多知识点都是第一次使用，还有很多需要修改的地方，接下来会慢慢完善demo。
+六、demo中很多知识点都是第一次使用，还有很多需要修改的地方，接下来会慢慢完善。
 ```
 
 ## 推荐一些好的文章和官方文档
