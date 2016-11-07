@@ -1,0 +1,82 @@
+.rule_nav{
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 2.2rem;
+	height: 2.2rem;
+	background-color: #fff;
+	.rule_name{
+		li{
+			height: 2.2rem;
+			font-size: 0.7rem;
+			text-align: center;
+			color: #333;
+			box-sizing: border-box;
+			float: left;
+			border-right: 0.05rem solid #f1f1f1;
+			overflow: hidden;
+			span{
+				display: inline-block;
+				line-height: 2.2rem;
+				height: 2.2rem;
+				font-size: 0.7rem;
+				box-sizing: border-box;
+			}
+		}
+		.rule_active{
+			span{
+				color: #985ec9;
+				border-bottom: 0.1rem solid #985ec9;
+			}
+		}
+	}
+	.rule_aside{
+		width: 13%;
+		height: 2.2rem;
+		position: relative;
+		background: url(../images/icon_list@3x.png) no-repeat;
+		background-position: center;
+		background-size: 0.25rem 1rem;
+		.rule_hide{
+			position: absolute;
+			top: 2.45rem;
+			right: 0.25rem;
+			li{
+				width: 4.5rem;
+				height: 1.7rem;
+				font-size: 0.7rem;
+				color: #333;
+				line-height: 1.7rem;
+				text-align: center;
+				margin-bottom: 1px;
+				position: relative;
+				overflow: hidden;
+				span{
+					border-radius: 0.125rem;
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					left: 0;
+					opacity: 0.3;
+					background-color: #985ec9;
+				}
+				p{
+					position: relative;
+					z-index: 11;
+				}
+			}
+		}
+	}
+}
+
+.rule_content{
+	margin-top: 4.9rem;
+	background-color: #fff;
+	font-size: 0.7rem;
+	color: #494949;
+	text-align: center;
+	line-height: 1.5rem;
+	min-height: 21.25rem;
+	width: 100%;
+	overflow-x: hidden;
+}
