@@ -20,7 +20,7 @@ react + react-router + redux + immutable + less + ES6 + webpack + fetch + 按需
  npm run dist （发布生产版本）
 ```
 
-## 总结:blush:：
+## 总结：
 ```
 一、Virtual DOM是react的标志。虚拟DOM之所以快有两点原因：1、Javascript运行很快  2、操作真实DOM很慢。
 DOM操作起来很慢很耗CPU，所以react将DOM直接写进js，再也没有html文件，所有的DOM都在js中生成并渲染。
@@ -42,7 +42,7 @@ redux相当于在react的最顶层加了一个数据层，所有需要共用的�
 
 六、fetch是ajax最新替代技术。ajax基于事件而fetch基于Promise，更加友好，更近符合现代发展趋势。
 
-七、demo中很多知识点都是第一次使用，还有很多需要修改的地方，接下来会慢慢完善。
+七、demo还有很多需要修改的地方，接下来会慢慢完善。
 ```
 
 ## 推荐一些好的文章和官方文档
