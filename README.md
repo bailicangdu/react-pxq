@@ -20,7 +20,7 @@ react + react-router + redux + immutable + less + ES6 + webpack + fetch + 按需
  npm run dist （发布生产版本）
 ```
 
-## 总结`:kissing_closed_eyes:`：
+## 总结:kissing_closed_eyes:：
 ```
 一、Virtual DOM是react的标志。虚拟DOM之所以快有两点原因：1、Javascript运行很快  2、操作真实DOM很慢。
 都知道DOM操作起来很慢很耗CPU，所以react将DOM直接写进js，再也没有html文件，所有的DOM都在js中生成并渲染。
