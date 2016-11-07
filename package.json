@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1340641314/react-cnode.git"
+    "url": "git+https://github.com/bailicangdu/pxq.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/1340641314/react-cnode/issues"
+    "url": "https://github.com/bailicangdu/pxq/issues"
   },
-  "homepage": "https://github.com/1340641314/react-cnode#readme",
+  "homepage": "https://github.com/bailicangdu/pxq#readme",
   "dependencies": {
     "github-markdown-css": "^2.4.0",
     "normalize.css": "^4.1.1",
