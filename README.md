@@ -25,7 +25,6 @@ react + react-router + redux + immutable + less + ES6 + webpack + fetch + 按需
 一、Virtual DOM是react的标志。虚拟DOM之所以快有两点原因：1、Javascript运行很快  2、操作真实DOM很慢。
 DOM操作起来很慢很耗CPU，所以react将DOM直接写进js，再也没有html文件，所有的DOM都在js中生成并渲染。
 我们不需要控制DOM如何生成如何渲染，react已经替我们做好了一切，我们只需要告诉它想要的效果，它会用最好的方法将效果渲染出来。
-这就是虚拟DOM，它不直接对DOM进行操作，只操作存在于内存中的DOM，并用最佳的方式渲染出来。
 
 二、Redux是个数据管理中心，它主要的作用是实现组件之间的通信。当react组件结构树庞大，交互复杂，
 组件之间的通信将会非常麻烦，因为react是单向数据流，只能通过props传入子组件，如果向上传递必须特殊处理。
