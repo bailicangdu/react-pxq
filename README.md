@@ -48,7 +48,7 @@ redux相当于在react的最顶层加了一个数据层，所有需要共用的�
 
 1.[React 入门教程](http://uprogrammer.cn/react-tutorial-cn/)<br /> 
 2.[Redux 中文文档](http://cn.redux.js.org/)<br />
-3.[Immutable.js 官方文档](http://facebook.github.io/immutable-js/docs/)<br />    
+3.[Immutable.js 官方文档](http://facebook.github.io/immutable-js/docs/)<br />
 4.[ES6入门教程](http://es6.ruanyifeng.com/)<br /> 
 5.[React+Redux教程](http://www.cnblogs.com/lewis617/p/5145073.html)<br /> 
 6.[React组件沟通的方法](http://www.alloyteam.com/2016/01/some-methods-of-reactjs-communication-between-components/)<br /> 
