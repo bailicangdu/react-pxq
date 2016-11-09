@@ -37,7 +37,7 @@ redux相当于在react的最顶层加了一个数据层，所有需要共用的�
 
 五、immutable定义了一种数据类型，一旦定义就不能更改，所有对数据的操作都会生成一个新的数据。
 它可以极大的提高react的速度，但是它改变了数据结构，容易坑。demo是在写完之后才加上immutable，
-所以每次改变以前的state为immutable，都会影响其他的数据变化，很麻烦。
+所以每次改变以前的state为immutable，都会影响其他的数据变化，很麻烦。所以接下来项目会在一开始就使用immutable。
 
 六、fetch是ajax最新替代技术。ajax基于事件而fetch基于Promise，更加友好，更近符合现代发展趋势。
 
