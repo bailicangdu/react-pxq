@@ -15,9 +15,9 @@ react + redux + immutable + less + sass + ES6 + webpack + fetch + webpack-dev-se
 
 ## 运行（nodejs 6.0+）
 ```
- npm run dev (开发版本访问：http://localhost:8080/)
+ npm run dev (编译模式，进行热替换功能，对应webpack.config.dev.js)
   
- npm run dist （发布生产版本）
+ npm run dist （发布生产版本，对应webpack.config.dist.js,对代码进行混淆压缩，提取公共代码，分离css文件）
 ```
 
 ## 总结：
@@ -29,6 +29,9 @@ DOM操作起来很慢很耗CPU，所以react将DOM直接写进js，再也没有h
 二、Redux是个数据管理中心，它主要的作用是实现组件之间的通信。当react组件结构树庞大，交互复杂，
 组件之间的通信将会非常麻烦，因为react是单向数据流，只能通过props传入子组件，如果向上传递必须特殊处理。
 redux相当于在react的最顶层加了一个数据层，所有需要共用的数据放在这里统一管理。如果项目组件不多，逻辑不复杂，redux可以不用。
+对于第一次接触redux的人，很多人第一感觉就是懵，不知道如何下手，文档看了一遍，似乎看懂了，还是不知道该怎么写。
+那种和react关系密切但是又似乎没有关系的感觉让人特别不舒服。redux上手的确是有点难的，如果受不了reudx，推荐使用
+mobx，这是新出的一个库，功能类似redux，优点是上手特别简单，而且不需要像redux一样做太多的优化。
 
 三、ES6很强大，并且经过babel转换后兼容性很好。
 
@@ -42,7 +45,8 @@ redux相当于在react的最顶层加了一个数据层，所有需要共用的�
 六、fetch是ajax最新替代技术。ajax基于事件而fetch基于Promise，更加友好，更近符合现代发展趋势。
 
 七、11月14日新增热替换功能，局部替换修改的状态，不用刷新页面，提高开发效率。部分less文件改成sass文件，
-对比两种css预编译工具，感觉差别不大
+对比两种css预编译工具，感觉差别不大。
+
 ```
 
 ## 推荐一些好的文章和官方文档
