@@ -34,7 +34,6 @@ const system = (() => {
   }
   return system
 })()
-
 const target = process.env.NODE_ENV !== 'production' ? '' : 'http://shopro.putaoevent.com'; //目标网站
 export {
   target,

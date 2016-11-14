@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 import {Tool} from '../Config/Tool';
-import {Header,template} from './common/Index';
+import {Header,template} from './common/modules';
 
 
 class List extends Component {

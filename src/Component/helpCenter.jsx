@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
-import { Header,template} from './common/Index';
+import { Header,template} from './common/modules';
 
 
 /**

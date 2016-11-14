@@ -1,0 +1,49 @@
+.product_list_ul{
+	padding-top: 2.75rem;
+	.chooseProduct_item{
+		background-color: #fff;
+		border-bottom:0.05rem solid #ebebeb;
+		padding: 0.75rem;
+		.chooseItem_left{
+			width: 7.5rem;
+			font-size: 0.8rem;
+			color: #333;
+			line-height: 1.15rem;
+			padding-left: 1.75rem;
+			background: url(../images/icon_nor@3x.png) no-repeat left center;
+			background-size: 1.05rem 1.05rem;
+		}
+		.choosed{
+			background: url(../images/icon_choosed.png) no-repeat left center;
+			background-size: 1.05rem 1.05rem;
+		}
+		.chooseItem_right{
+			.button_style{
+				height: 1.15rem;
+				width: 1.15rem;
+				border-radius: 50%;
+				vertical-align: middle;
+			}
+			.product_num{
+				font-size: 0.8rem;
+				line-height: 1.15rem;
+				width: 2rem;
+				padding-left: 0.15rem;
+				vertical-align: bottom;
+				text-align: center;
+			}
+			.reduce{
+				background: url(../images/reduce.png) no-repeat left center;
+				background-size: 1.15rem 1.15rem;
+			}
+			.reduce_no{
+				background: url(../images/reduce_no.png) no-repeat left center;
+				background-size: 1.15rem 1.15rem;
+			}
+			.add{
+				background: url(../images/add.png) no-repeat left center;
+				background-size: 1.15rem 1.15rem;
+			}
+		}
+	}
+}

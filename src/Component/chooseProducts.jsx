@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { History, Link } from 'react-router';
 import { connect } from 'react-redux';
 import { Tool } from '../Config/Tool';
-import {Header, template} from './common/Index';
+import {Header, template} from './common/modules';
 
 
 
@@ -108,6 +108,7 @@ class Main extends Component {
             director:-1,
             requestID:null,
             clientWidth:0,
+            moving:false,
         }
 
         this.productsState = (id,chooseState,num,index) => {
@@ -122,6 +123,7 @@ class Main extends Component {
             this.state.clientWidth = document.documentElement.clientWidth;
             this.state.director = this.state.director*(-1)
             cancelAnimationFrame(this.state.requestID)
+            this.state.moving = true;
             this.getMove();
         }
         
@@ -183,9 +185,11 @@ class Main extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return this.state.shouldUpdata
+        return this.state.shouldUpdata || this.state.moving
     }
-
+    componentWillUnmount(){
+        cancelAnimationFrame(this.state.requestID)
+    }
     render() {
         let MoveDiv = {position:'fixed',backgroundColor:'red',height:'100px',width:'100px',zIndex:99999,left:this.state.left,bottom:'0'};
         return (

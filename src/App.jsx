@@ -4,11 +4,12 @@ import {Provider} from 'react-redux';
 import route from './Router/Route'; //路由配置
 import store from './Redux/Store/Store';
 import './Config/Config.js';//引入默认配置
+import './Config/wx.js';//引入微信
 
-import './Style/common.less';
-import './Style/head.less';
-import './Style/index.less';
-import './Style/chooseProducts.less';
+import './Style/common.scss';
+import './Style/head.scss';
+import './Style/index.scss';
+import './Style/chooseProducts.scss';
 import './Style/helpCenter.less';
 import './Style/saleRecord.less';
 import './Style/allDeposit.less';

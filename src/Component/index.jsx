@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import {History, Link } from 'react-router';
 import { connect } from 'react-redux';
 import {Tool} from '../Config/Tool';
-import {Header,template} from './common/Index';
+import {Header,template} from './common/modules';
 import {system} from '../Config/Config';
 
 
@@ -151,7 +151,7 @@ class Main extends Component {
         this.state.name = params.name||'';
         this.state.phone = params.phone||'';
         this.state.picSrc = params.picSrc||'';
-        this.state.serverId = params.serverId||'aaaa';
+        this.state.serverId = params.serverId||'';
     }
     componentDidMount() {
         
