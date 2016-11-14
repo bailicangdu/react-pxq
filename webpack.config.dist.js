@@ -14,9 +14,13 @@ module.exports = {
     entry: {
         app: APP_FILE,
         common: [
-            "./src/Component/common/modules.jsx",
             "react",
-            'react-router'
+            'react-dom',
+            'react-router',
+            'redux',
+            'react-redux',
+            'redux-thunk',
+            'immutable'
         ]
     },
     output: {

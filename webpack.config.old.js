@@ -12,7 +12,7 @@ var APP_FILE = path.resolve(APP_PATH, 'app'); //根目录文件app.jsx地址
 var BUILD_PATH = path.resolve(ROOT_PATH, 'pxq/dist'); //发布文件所存放的目录
 
 if (process.argv.indexOf('-p') > -1) { //process.argv在run dist中是webpack --progress --colors --watch -p 所以indexof(-p)是指压缩，也就是说生产环境满足条件而编译环境不满足条件
-    plugins.push(new webpack.DefinePlugin({ //编译成生产版本,定义一个插件，所以才有target = process.env.NODE_ENV !== 'production' ? '' : 'http://shopro.putaoevent.com'的比较
+    plugins.push(new webpack.DefinePlugin({ //编译成生产版本,定义一个插件，所以才有target = process.env.NODE_ENV !== 'production' ?的比较
         //process.argv：当前进程的命令行参数数组。
         //process.env：指向当前shell的环境变量，比如process.env.HOME。
         'process.env': {
