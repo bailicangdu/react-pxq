@@ -4,12 +4,14 @@
   "description": "react-demo",
   "main": "server.js",
   "scripts": {
+    "old_dev": "node server_old.js",
+    "old_dist": "webpack --config webpack.config.old.js --progress --colors --watch -p",
     "dev": "node server.js",
-    "dist": "webpack --progress --colors --watch -p"
+    "dist": "set NODE_ENV=production && webpack --config webpack.config.dist.js --progress --colors --watch -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bailicangdu/pxq.git"
+    "url": "https://github.com/bailicangdu/pxq.git"
   },
   "author": "",
   "license": "ISC",

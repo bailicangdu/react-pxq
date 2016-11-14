@@ -4,7 +4,6 @@ import {Provider} from 'react-redux';
 import route from './Router/Route'; //路由配置
 import store from './Redux/Store/Store';
 import './Config/Config.js';//引入默认配置
-import './Config/wx.js';//引入微信
 
 import './Style/common.scss';
 import './Style/head.scss';

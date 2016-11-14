@@ -25,25 +25,26 @@ const requestPosts = path => {
 //获取数据成功
 const receivePosts = (path, json) => {
   return {
-    type: RECEIVE_POSTS,
-    path ,
-    json ,
-  }
+        type: RECEIVE_POSTS,
+        path ,
+        json 
+    }
 }
 
 export const fetchPosts = (path, postData) => {
     let url = target + path + Tool.paramType(postData);
     return dispatch => {
-        dispatch(requestPosts(postData))
+        dispatch(requestPosts(postData));
         return fetch(url,{
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            mode: 'cors',
+            mode: 'no-cors'
         })
-        .then(response => response.json())
-        .then(json => dispatch(receivePosts(path, json)))
+        .then(response => {
+            if (response.ok) {
+                response.json().then(json => dispatch(receivePosts(path, json)))
+            } else {
+                console.log("Looks like the response wasn't perfect, got status", response.status);
+            }
+        })
         .catch(error => console.log(error))
     }
 }
@@ -55,7 +56,7 @@ export const recordState = (id,chooseState,num,index) => {
         id,
         chooseState,
         num,
-        index,
+        index
     }
 }
 
@@ -63,7 +64,7 @@ export const recordState = (id,chooseState,num,index) => {
 export const saveProductlist = productList => {
     return{
         type:SAVE_PRODUCT_LIST,
-        productList,
+        productList
     }
 }
 
@@ -71,7 +72,7 @@ export const saveProductlist = productList => {
 export const newProductData = productData => { 
     return {
         type:NEW_PRODUCT_DATA,
-        productData,
+        productData
     }
 }   
 
@@ -79,7 +80,7 @@ export const newProductData = productData => {
 export const deleteItem = index => {   
     return {
         type:DELETE_ITEM,
-        index,
+        index
     }
 }
 
@@ -98,7 +99,7 @@ const getDataSuccess = (path, json, success, name) => {
     path ,
     json ,
     success ,
-    name,
+    name
   }
 }
 
@@ -111,7 +112,7 @@ export const getData = (path, postData, success, name) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            mode: 'cors',
+            mode: 'no-cors'
         })
         .then(response => response.json())
         .then(json => dispatch(getDataSuccess(path, json, success, name)))
