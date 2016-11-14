@@ -1,5 +1,5 @@
 ## 技术栈：
-react + react-router + redux + immutable + less + ES6 + webpack + fetch + 按需加载 + webpack-dev-server反向代理 + 调用微信相机和相册接口
+react + react-router按需加载 + redux + immutable + less + ES6 + webpack + fetch + webpack-dev-server反向代理 +react-transform热替换
 
 
 ## 下载
