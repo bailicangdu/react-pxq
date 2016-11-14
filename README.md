@@ -25,7 +25,6 @@ react + react-router + redux + immutable + less + ES6 + webpack + fetch + 按需
 一、Virtual DOM是react的标志。虚拟DOM之所以快有两点原因：1、Javascript运行很快  2、操作真实DOM很慢。
 DOM操作起来很慢很耗CPU，所以react将DOM直接写进js，再也没有html文件，所有的DOM都在js中生成并渲染。
 我们不需要控制DOM如何生成如何渲染，react已经替我们做好了一切，我们只需要告诉它想要的效果，它会用最好的方法将效果渲染出来。
-这就是虚拟DOM，它不直接对DOM进行操作，只操作存在于内存中的DOM，并用最佳的方式渲染出来。
 
 二、Redux是个数据管理中心，它主要的作用是实现组件之间的通信。当react组件结构树庞大，交互复杂，
 组件之间的通信将会非常麻烦，因为react是单向数据流，只能通过props传入子组件，如果向上传递必须特殊处理。
@@ -38,18 +37,19 @@ redux相当于在react的最顶层加了一个数据层，所有需要共用的�
 
 五、immutable定义了一种数据类型，一旦定义就不能更改，所有对数据的操作都会生成一个新的数据。
 它可以极大的提高react的速度，但是它改变了数据结构，容易坑。demo是在写完之后才加上immutable，
-所以每次改变以前的state为immutable，都会影响其他的数据变化，很麻烦。
+所以每次改变以前的state为immutable，都会影响其他的数据变化，很麻烦。所以接下来项目会在一开始就使用immutable。
 
 六、fetch是ajax最新替代技术。ajax基于事件而fetch基于Promise，更加友好，更近符合现代发展趋势。
 
-七、demo还有很多需要修改的地方，接下来会慢慢完善。
+七、demo可以直接拿过来做项目，需要的壳都有，只要换一下里面的内容即可，当然还有很多需要修改的地方，接下来会慢慢完善，
+也会加一些其他的技术，接下来我依然会做react的项目，会在组件渲染速度上进行提升。
 ```
 
 ## 推荐一些好的文章和官方文档
 
 1.[React 入门教程](http://uprogrammer.cn/react-tutorial-cn/)<br /> 
 2.[Redux 中文文档](http://cn.redux.js.org/)<br />
-3.[Immutable.js 官方文档](http://facebook.github.io/immutable-js/docs/)<br />    
+3.[Immutable.js 官方文档](http://facebook.github.io/immutable-js/docs/)<br />
 4.[ES6入门教程](http://es6.ruanyifeng.com/)<br /> 
 5.[React+Redux教程](http://www.cnblogs.com/lewis617/p/5145073.html)<br /> 
 6.[React组件沟通的方法](http://www.alloyteam.com/2016/01/some-methods-of-reactjs-communication-between-components/)<br /> 
