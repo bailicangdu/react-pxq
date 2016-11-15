@@ -7,7 +7,7 @@
 
 4 less
 
-5 sass
+5 scss
 
 6 ES6
 
