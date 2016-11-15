@@ -1,5 +1,15 @@
 ## 技术栈：
-react + redux + immutable + less + sass + ES6 + webpack + fetch + webpack-dev-server反向代理 + react-router按需加载 + react-transform热替换
+1 react  
+2、redux 
+3、immutable 
+4、less 
+5、sass 
+6、ES6 
+7、webpack 
+8、fetch 
+9、webpack-dev-server反向代理 
+10、react-router按需加载 
+11、react-transform热替换
 
 
 ## 下载
