@@ -250,7 +250,6 @@ class Main extends Component {
 export default template({
     id: 'index',  //应用关联使用的redux
     component: Main,//接收数据的组件入口
-    url: '/user/user/checkRegister',
-    data: {}
+    url: '/user/user/checkRegister'
 });
 

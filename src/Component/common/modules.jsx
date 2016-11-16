@@ -1,7 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import { Link, IndexLink } from 'react-router';
 import { is, fromJS} from 'immutable';
-import pureRender from "pure-render-decorator"
 import { Tool } from '../../Config/Tool';
 import template from './template';
 export {template}

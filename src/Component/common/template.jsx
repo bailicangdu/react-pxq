@@ -7,7 +7,7 @@ const Main = (mySeting) => {
     let seting = {
         id: '', //应用唯一id表示
         url: '', //请求地址
-        data: null, //发送给服务器的数据
+        data: {}, //发送给服务器的数据
         component: <div></div>, //数据回调给的组件
     };
 

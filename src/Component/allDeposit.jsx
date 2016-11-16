@@ -50,6 +50,5 @@ class Main extends Component {
 export default template({
     id: 'allDeposit',  //应用关联使用的redux
     component: Main,
-    url: '/balance/balance/getBalance',
-    data: {}
+    url: '/balance/balance/getBalance'
 });
