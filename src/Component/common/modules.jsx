@@ -1,5 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import { Link, IndexLink } from 'react-router';
+import { is, fromJS} from 'immutable';
+import pureRender from "pure-render-decorator"
 import { Tool } from '../../Config/Tool';
 import template from './template';
 export {template}
@@ -10,6 +12,7 @@ export {template}
  * @class Header
  * @extends {Component}
  */
+
 export class Header extends Component {  //头部标题
      constructor(props,context) {
         super(props,context);
@@ -28,10 +31,12 @@ export class Header extends Component {  //头部标题
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps) ||!(this.state === nextState);
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
     }
     
     render() {
+        console.log('头部组件更新了')
         let {nav, saleRecord ,title ,HideList,goback ,save,productsInform,applyRecord,params} = this.props;
         let navState = this.state.showHide;
         let indexNavStyle = {}

@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
-import { is } from 'immutable';
+import { is, fromJS} from 'immutable';
 import *as action from '../../Redux/Action/Index';
 
 const Main = (mySeting) => {

@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {History, Link } from 'react-router';
 import { connect } from 'react-redux';
-import immutable ,{is, Map, fromJS} from 'immutable'
+import { is, fromJS} from 'immutable';
 import {Tool} from '../Config/Tool';
 import {Header,template} from './common/modules';
 
@@ -169,7 +169,8 @@ class Main extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps) ||!(this.state === nextState);
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
     }
     
     componentWillUpdate(nextProps,nextState){
@@ -180,6 +181,7 @@ class Main extends Component {
     }
     render() {
         let products = this.state.products;
+        console.log('首页组件更新了')
         return (
             <div className="component_container index_module">
                 

@@ -4,7 +4,7 @@
   "description": "react-demo",
   "main": "server.js",
   "scripts": {
-    "odev": "node server_old.js",
+    "odev": "node server_normal.js",
     "dev": "node server.js",
     "dist": "set NODE_ENV=production && webpack --config webpack.config.dist.js --progress --colors --watch -p"
   },
@@ -22,6 +22,7 @@
     "github-markdown-css": "^2.4.0",
     "immutable": "^3.8.1",
     "normalize.css": "^4.1.1",
+    "pure-render-decorator": "^1.2.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",

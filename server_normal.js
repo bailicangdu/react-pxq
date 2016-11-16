@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config.old');
+var config = require('./webpack.config.normal');
 
 //代理服务器
 var proxy = [{
