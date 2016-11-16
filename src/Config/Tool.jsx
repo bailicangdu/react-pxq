@@ -18,6 +18,17 @@ Tool.paramType = data => {
 }
 
 
+Tool.ajax = url => {
+  return new Promise((resolve, reject) => {
+    let xml = new XMLHttpRequest();
+    xml.open('get',url,true);
+    xml.onload = resolve;
+    xml.onerror = reject;
+    xml.send();
+  } )
+}
+
+
 let alertText = document.createElement('div');
 alertText.setAttribute('id','alertText');
 

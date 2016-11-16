@@ -4,8 +4,7 @@
   "description": "react-demo",
   "main": "server.js",
   "scripts": {
-    "old_dev": "node server_old.js",
-    "old_dist": "webpack --config webpack.config.old.js --progress --colors --watch -p",
+    "odev": "node server_old.js",
     "dev": "node server.js",
     "dist": "set NODE_ENV=production && webpack --config webpack.config.dist.js --progress --colors --watch -p"
   },

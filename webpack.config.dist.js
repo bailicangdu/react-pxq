@@ -7,7 +7,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin'); //生成html
 var ROOT_PATH = path.resolve(__dirname);
 var APP_PATH = path.resolve(ROOT_PATH, 'src'); //__dirname 中的src目录，以此类推
 var APP_FILE = path.resolve(APP_PATH, 'app'); //根目录文件app.jsx地址
-var BUILD_PATH = path.resolve(ROOT_PATH, 'pxq/dist'); //发布文件所存放的目录
+var BUILD_PATH = path.resolve(ROOT_PATH, '/pxq/dist'); //发布文件所存放的目录
 
 
 module.exports = {
@@ -39,7 +39,7 @@ module.exports = {
             exclude: /^node_modules$/,
             loader: ExtractTextPlugin.extract('style', ['css', 'autoprefixer'])
         }, {
-            test: /\.less/,
+            test: /\.less$/,
             exclude: /^node_modules$/,
             loader: ExtractTextPlugin.extract('style', ['css', 'autoprefixer', 'less'])
         }, {
@@ -53,7 +53,8 @@ module.exports = {
         }, {
             test: /\.(png|jpg|gif)$/,
             exclude: /^node_modules$/,
-            loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]', //注意后面那个limit的参数，当你图片大小小于这个限制的时候，会自动启用base64编码图
+            loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]',
+            //注意后面那个limit的参数，当你图片大小小于这个限制的时候，会自动启用base64编码图
         }, {
             test: /\.jsx$/,
             exclude: /^node_modules$/,

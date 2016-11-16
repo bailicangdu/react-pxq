@@ -11,9 +11,6 @@ var proxy = [{
 }];
 var server = new WebpackDevServer(webpack(config), {
 	publicPath: config.output.publicPath,
-	hot: true,
-	historyApiFallback: true,
-	inline: true,
 	progress: true,
 	stats: {
 		colors: true

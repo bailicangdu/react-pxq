@@ -30,7 +30,6 @@ class Main extends Component {
     }
     
     render() {
-        let {data} = this.props.state;
         return (
             <div>
                <Header nav title='提现'  applyRecord />
