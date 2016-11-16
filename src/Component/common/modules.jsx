@@ -26,7 +26,6 @@ export class Header extends Component {  //头部标题
                 this.setState({showHide:'block'})
             }
         }
-
     }
 
     shouldComponentUpdate(nextProps, nextState) {

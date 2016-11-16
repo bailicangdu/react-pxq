@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config.normal');
+var config = require('./webpack.config.hot');
 
 //代理服务器
 var proxy = [{
@@ -11,6 +11,9 @@ var proxy = [{
 }];
 var server = new WebpackDevServer(webpack(config), {
 	publicPath: config.output.publicPath,
+	hot: true,
+	historyApiFallback: true,
+	inline: true,
 	progress: true,
 	stats: {
 		colors: true

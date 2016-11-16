@@ -22,9 +22,7 @@ const Main = (mySeting) => {
         }
 
         render() {
-            let state = {data:this.props.state.get('data'),isFetching:this.props.state.get('isFetching')}
-            let saleRecord = {index:this.props.saleRecord.get('index')};
-            return <this.props.seting.component {...this.props} state={state} saleRecord={saleRecord} />;
+            return <this.props.seting.component {...this.props} state={this.props.state.toJS()}/>;
         }
 
         componentDidMount() {//获取数据
