@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {History, Link } from 'react-router';
 import { connect } from 'react-redux';
-import immutable ,{is, Map, fromJS} from 'immutable';
+import immutable ,{is, Map, fromJS} from 'immutable'
 import {Tool} from '../Config/Tool';
 import {Header,template} from './common/modules';
 
@@ -9,7 +9,7 @@ import {Header,template} from './common/modules';
 class Main extends Component {
     constructor(props , context) {
         super(props , context);
-        this.state = fromJS({
+        this.state = {
             saleMoney:'',  //销售金额
             name:'',   //姓名
             phone:'',   //电话
@@ -19,9 +19,8 @@ class Main extends Component {
             picSrc:'',     //图片src
             saleOldvalue:'',    //金额上次input值
             preventMountSubmit:true,//防止重复提交
-        })
-        // this.state = this.state.set('preventMountSubmit',false)
-        // console.log(this.state.get('preventMountSubmit'))
+        }
+
         this.changeValue = (type,event) => {
             if (type === 'money') {
                 let value = event.target.value;
@@ -33,14 +32,14 @@ class Main extends Component {
                         value = value.replace(/^0+/,'0');
                     }
                     value = value.replace(/^\./gi,'0.');
-                    this.state = this.state.set('saleOldvalue',value);
+                    this.state.saleOldvalue = value;
+                    this.state.inputLength = value.length;
                 }else{
-                      value = this.state.get('saleOldvalue');
+                      value = this.state.saleOldvalue;
                 }
-                // this.state = this.state.set('saleMoney',value);
-                // console.log(this.state.get('saleMoney'))
-                //this.forceUpdate()
-                this.setState({saleMoney:this.state.set('saleMoney',value)});
+                this.setState({
+                    saleMoney:value
+                })
             }else if (type === 'name') {
                 this.setState({
                     name:event.target.value
@@ -127,12 +126,7 @@ class Main extends Component {
         }  
         
     }
-    componentWillUpdate(nextProps,nextState){
-        if (this.props !== nextProps) {
-            let {data} = nextProps.state;
 
-        }
-    }
     componentWillMount() {
         let params = this.props.location.query;
         if (this.props.producRecord.productList&&this.props.location.search!=='') {
@@ -155,7 +149,6 @@ class Main extends Component {
         this.state.serverId = params.serverId||'';
     }
     componentDidMount() {
-        
         const url = window.location.href.split('#')[0];
         const successFun = (res) => {
             wx.config({
@@ -179,6 +172,12 @@ class Main extends Component {
         return !(this.props === nextProps) ||!(this.state === nextState);
     }
     
+    componentWillUpdate(nextProps,nextState){
+        if (this.props !== nextProps) {
+            let {data} = nextProps.state;
+
+        }
+    }
     render() {
         let products = this.state.products;
         return (
@@ -192,7 +191,7 @@ class Main extends Component {
                 <form className='form_style'>
                     <div className='input_container'>
                         <span className='input_descript'>销售金额：</span>
-                        <input type="text" value={this.state.get('saleMoney')} placeholder='请输入订单金额' onChange={this.changeValue.bind(this,'money')}/>
+                        <input type="text" value={this.state.saleMoney} placeholder='请输入订单金额' onChange={this.changeValue.bind(this,'money')}/>
                     </div>
                     <div className='input_container'>
                         <span className='input_descript'>客户姓名：</span>
@@ -209,7 +208,6 @@ class Main extends Component {
                 </div>
 
                 <div className='choose_product'>
-                {/*
                     <Link to={'/chooseProducts?saleMoney='+this.state.saleMoney+'&name='+this.state.name+'&phone='+this.state.phone+'&picSrc='+this.state.picSrc+'&serverId='+this.state.serverId} className={products.length > 0 ? 'showIcon':'link_choose'}>{products.length > 0 ? '':'请选择销售的产品'}</Link>
                     <ul  className={`choosed_ul clear ${products.length > 0 ? 'show':'hide'}`}>
                         {
@@ -222,7 +220,6 @@ class Main extends Component {
                             }):null
                         }
                     </ul>
-                */}
                 </div>
 
                 <div className='index_tip'>
