@@ -36,7 +36,6 @@ export class Header extends Component {  //头部标题
     }
     
     render() {
-        console.log('头部组件更新了')
         let {nav, saleRecord ,title ,HideList,goback ,save,productsInform,applyRecord,params} = this.props;
         let navState = this.state.showHide;
         let indexNavStyle = {}

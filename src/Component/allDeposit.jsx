@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import { Router, Route, IndexRoute, browserHistory, Link } from 'react-router';
 import { connect } from 'react-redux';
+import { is, fromJS} from 'immutable';
 import {Tool} from '../Config/Tool';
 import {Header, template} from './common/modules';
 
@@ -26,7 +27,8 @@ class Main extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps) ||!(this.state === nextState);
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
     }
     
     render() {

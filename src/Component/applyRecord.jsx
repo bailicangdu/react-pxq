@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import { History, Link } from 'react-router';
 import { connect } from 'react-redux';
+import { is, fromJS} from 'immutable';
 import {Tool} from '../Config/Tool';
 import {Header, template} from './common/modules';
 
@@ -8,7 +9,8 @@ import {Header, template} from './common/modules';
 
 class List extends Component {
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps) ||!(this.state === nextState);
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
     }
 
     render() {
@@ -48,10 +50,12 @@ class ListItem extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps) ||!(this.state === nextState);
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
     }
 
     render() {
+
         let {month,totalMoney,applyList,index} = this.props;
         let showList = this.state.showlist;
         if (!showList) {
@@ -79,12 +83,9 @@ class ListItem extends Component {
 }
 
 class DetailItem extends Component {
-    constructor(){
-        super()
-        this.state = {
-
-        }
-
+    shouldComponentUpdate(nextProps, nextState) {
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
     }
     render(){
         let {startTime,endTime,applyMoney,status} = this.props;
@@ -124,7 +125,6 @@ class Main extends Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-
         if (this.props !== nextProps) {
             let newDate = new Date()
             let nowTime = newDate.getFullYear()+'-'+(newDate.getMonth()+1);
@@ -156,7 +156,8 @@ class Main extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps) ||!(this.state === nextState);
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
     }
     
     render() {

@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { History, Link } from 'react-router';
 import { connect } from 'react-redux';
+import { is, fromJS} from 'immutable';
 import { Tool } from '../Config/Tool';
 import {Header, template} from './common/modules';
 
@@ -9,7 +10,8 @@ import {Header, template} from './common/modules';
 class List extends Component {
 
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps) ||!(this.state === nextState);
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
     }
 
     render() {
@@ -74,7 +76,8 @@ class ListItem extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps) ||!(this.state === nextState);
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
     }
     
     render() {
@@ -123,8 +126,8 @@ class Main extends Component {
             this.state.clientWidth = document.documentElement.clientWidth;
             this.state.director = this.state.director*(-1)
             cancelAnimationFrame(this.state.requestID)
-            this.state.moving = true;
             this.getMove();
+            this.state.moving = true;
         }
         
         this.getMove = () => {
@@ -149,7 +152,6 @@ class Main extends Component {
     }
 
     componentWillReceiveProps(nextProps){
-        //console.log(nextProps)
         this.state.shouldUpdata = false;
         if (this.props !== nextProps) {
             let data = nextProps.state.data;
@@ -185,10 +187,12 @@ class Main extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return this.state.shouldUpdata || this.state.moving
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState))) && (this.state.shouldUpdata || this.state.moving)
     }
+    
     componentWillUnmount(){
-        cancelAnimationFrame(this.state.requestID)
+        cancelAnimationFrame(this.state.requestID);
     }
     render() {
         let MoveDiv = {position:'fixed',backgroundColor:'red',height:'100px',width:'100px',zIndex:99999,left:this.state.left,bottom:'0'};

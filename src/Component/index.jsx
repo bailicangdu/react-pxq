@@ -181,7 +181,6 @@ class Main extends Component {
     }
     render() {
         let products = this.state.products;
-        console.log('首页组件更新了')
         return (
             <div className="component_container index_module">
                 

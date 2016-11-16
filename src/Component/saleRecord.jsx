@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
+import { is, fromJS} from 'immutable';
 import {Tool} from '../Config/Tool';
 import {Header,template} from './common/modules';
 
@@ -7,7 +8,8 @@ import {Header,template} from './common/modules';
 class List extends Component {
 
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps) ||!(this.state === nextState);
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
     }
 
     render() {
@@ -42,8 +44,9 @@ class ListItem extends Component {
         }
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps) ||!(this.state === nextState);
+     shouldComponentUpdate(nextProps, nextState) {
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
     }
 
     render() {
@@ -199,7 +202,8 @@ class Main extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps) ||!(this.state === nextState);
+        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
+        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
     }
     
     render() {
@@ -227,7 +231,6 @@ class Main extends Component {
 Main.propTypes = {
     saleRecord:PropTypes.object.isRequired
 }
-
 Main.childContextTypes = {
     deleteItem: React.PropTypes.any,
     getData: React.PropTypes.any,
