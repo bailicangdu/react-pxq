@@ -69,16 +69,7 @@ mobx，这是新出的一个库，功能类似redux，优点是上手特别简�
 
 ```
 
-## 推荐一些好的文章和官方文档
+## 11月14日新增热替换功能
 
-1.[React 入门教程](http://uprogrammer.cn/react-tutorial-cn/)<br /> 
-2.[Redux 中文文档](http://cn.redux.js.org/)<br />
-3.[Immutable.js 官方文档](http://facebook.github.io/immutable-js/docs/)<br />
-4.[ES6入门教程](http://es6.ruanyifeng.com/)<br /> 
-5.[React+Redux教程](http://www.cnblogs.com/lewis617/p/5145073.html)<br /> 
-6.[React组件沟通的方法](http://www.alloyteam.com/2016/01/some-methods-of-reactjs-communication-between-components/)<br /> 
-7.[React-router中文文档](http://www.uprogrammer.cn/react-router-cn/)<br /> 
-8.[Webpack 中文指南](http://uprogrammer.cn/webpack-handbook/)<br />
-9.[React实例 react-cnode](https://github.com/lzxb/react-cnode)<br />
 
 
