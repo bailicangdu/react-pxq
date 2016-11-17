@@ -78,7 +78,7 @@ mobx，这是新出的一个库，功能类似redux，优点是上手特别简�
 ```
 添加immutable.js的使用，减少组件不必要的更新，优化性能
 ```
-* [前端路由实现与 react-router 源码分析](https://github.com/bailicangdu/pxq/issues/1)
+[前端路由实现与 react-router 源码分析](https://github.com/bailicangdu/pxq/issues/1)
 
 
 
