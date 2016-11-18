@@ -7,8 +7,8 @@ import {Header,template} from './common/modules';
 
 
 class Main extends Component {
-    constructor(props , context) {
-        super(props , context);
+    constructor() {
+        super();
         this.state = {
             saleMoney:'',  //销售金额
             name:'',   //姓名
@@ -179,8 +179,10 @@ class Main extends Component {
 
         }
     }
+   
     render() {
         let products = this.state.products;
+        
         return (
             <div className="component_container index_module">
                 
