@@ -10,8 +10,6 @@ react + redux + immutable + less + ES6 + webpack + fetch + webpack-dev-server反
 
  	npm install 
 
- 	npm install webpack -g 
-
 
 ## 运行（nodejs 6.0+）
 ```
