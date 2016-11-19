@@ -32,7 +32,7 @@ react + redux + immutable + less + ES6 + webpack + fetch + webpack-dev-server反
 
 
 
-#总结
+#个人总结
 
 ##做react需要会什么？
 刚开始做项目的时候以为会来react和redux就足够了，可是事实总是喜欢打脸。之前我一直用angular，它的特点是大而全，只需要用到angular，就能进行开发，有一种葵花在手，天下我有的感觉。但是react就不一样了，他就负责ui渲染，想要做好一个项目，得会用redux来管理数据，还得会es6，webpack还得懂一点，要想提高性能，需要按需加载，immutable.js也得学一点，还有单元测试。。。。。
