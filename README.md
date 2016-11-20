@@ -135,7 +135,7 @@ Router就是React的一个组件，它并不会被渲染，只是一个创建内
 
 当页面比较多时，项目就会变得越来越大，尤其对于单页面应用来说，初次渲染的速度就会很慢，这时候就需要按需加载，只有切换到页面的时候才去加载对应的js文件。react配合webpack进行按需加载的方法很简单，Route的component改为getComponent，组件用require.ensure的方式获取，并在webpack中配置chunkFilename。
 
-`
+```javascript
 const chooseProducts = (location, cb) => {
     require.ensure([], require => {
         cb(null, require('../Component/chooseProducts').default)
@@ -166,4 +166,4 @@ const RouteConfig = (
     </Router>
 );
 
-`
+```
