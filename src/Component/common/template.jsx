@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { is, fromJS} from 'immutable';
 import *as action from '../../Redux/Action/Index';
 
-const Main = (mySeting) => {
+const Main = mySeting => {
     let seting = {
         id: '', //应用唯一id表示
         url: '', //请求地址
@@ -17,11 +17,13 @@ const Main = (mySeting) => {
 
 
     class Index extends Component {
-        constructor(props) {
-            super(props);
+        constructor(props,context) {
+            super(props,context);
+
         }
 
         render() {
+            console.log(this.props)
             return <this.props.seting.component {...this.props} state={this.props.state.toJS()}/>;
         }
 
@@ -43,7 +45,7 @@ const Main = (mySeting) => {
 
     Index.defaultProps = { seting }
     //mapStateToProps and mapDispatchToProps
-    return connect(state => { 
+    return connect(state => { //将顶层组件与模版绑定后return回去，配置路由的时候用的就是和redux绑定的组件，所以其实每个路由匹配的都是同一个组件，只不过这个组件的内容不同
         let {producRecord, saleRecord,requestData} = state;
         return { 
             state: state['fetchData'],

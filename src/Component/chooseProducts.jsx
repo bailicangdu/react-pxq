@@ -29,7 +29,6 @@ class List extends Component {
     }
 }
 
-
 class ListItem extends Component {
     constructor(props,context){
         super(props,context)
@@ -37,8 +36,7 @@ class ListItem extends Component {
             productCount:this.props.num,
             chooseState:this.props.chooseState,
         }
-
-         this.getProductCount = (type) => {  // 商品数量加减时进行计算
+        this.getProductCount = (type) => {  // 商品数量加减时进行计算
             if (this.state.chooseState) {
                 let num = this.state.productCount;
                 if (type == 'reduce'&&num > 0) {

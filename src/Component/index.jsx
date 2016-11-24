@@ -182,7 +182,6 @@ class Main extends Component {
    
     render() {
         let products = this.state.products;
-        console.log(this.props)
         return (
             <div className="component_container index_module">
                 
