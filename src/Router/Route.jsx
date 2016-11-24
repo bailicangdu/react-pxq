@@ -61,7 +61,7 @@ const RouteConfig = (
             <Route path="allDeposit" getComponent={allDeposit} />//余额
             <Route path="applyDeposit" getComponent={applyDeposit} />//申请提现
             <Route path="applyRecord" getComponent={applyRecord} /> //提现记录
-            <Redirect from='*' to='/' />
+            <Redirect from='*' to='/'  />
         </Route>
     </Router>
 );
