@@ -185,7 +185,7 @@ react推崇的是单向数据流，自上而下进行数据的传递，但是由
 
 
 
-## 流程是这个样子的：
+### 流程是这个样子的：
 
 
 ![](https://github.com/bailicangdu/pxq/blob/master/src/images/simple_redux.jpg)
@@ -196,7 +196,7 @@ react推崇的是单向数据流，自上而下进行数据的传递，但是由
 ###接下来具体分析一下，redux以及react-redux到底是怎么实现的。
 
 
-## 先上一张图
+### 先上一张图
 
 ![](https://github.com/bailicangdu/pxq/blob/master/src/images/all_redux.png)
 
