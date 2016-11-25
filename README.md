@@ -207,7 +207,7 @@ react推崇的是单向数据流，自上而下进行数据的传递，但是由
 
 ###先说说redux：
 
- ###redux主要由三部分组成：store，reducer，action。
+####redux主要由三部分组成：store，reducer，action。
 
 
 **store**是一个对象，它有四个主要的方法：
