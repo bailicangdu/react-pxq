@@ -2,7 +2,7 @@ import Immutable from 'immutable'
 import {SET_STATE, REQUEST_POSTS, RECEIVE_POSTS} from '../Action/Index'
 import {RECORD_STATE, SAVE_PRODUCT_LIST, NEW_PRODUCT_DATA} from '../Action/Index'
 import {DELETE_ITEM} from '../Action/Index'
-import {GET_DATA_START , GET_DATA_SUCCESS} from '../Action/Index'
+import {GET_DATA_START , GET_DATA_SUCCESS, TEST_DISPATCH} from '../Action/Index'
 
 
 //const initialState = Immutable.fromJS({}) //=Immutable.Map({})
@@ -29,6 +29,8 @@ export const requestData = (state = {}, action = {}) => {
             action.success(action.json);
             state[action.name] = action.json;
             return state;
+        case TEST_DISPATCH:
+            return Object.assign({},state,action);
         default:
             return state;
     }

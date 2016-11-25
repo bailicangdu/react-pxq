@@ -94,7 +94,8 @@ class ListItem extends Component {
     }
 }
 ListItem.contextTypes = {
-    recordState:React.PropTypes.any
+    recordState:React.PropTypes.any,
+    store:React.PropTypes.any
 }
 
 class Main extends Component {
