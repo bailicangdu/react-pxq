@@ -249,7 +249,7 @@ store可以通过createStore()方法创建，接受三个参数，经过combineR
 
 redux的state和react的state两者完全没有关系，除了名字一样。
 
-**上面分析了redux的主要功能，那么react-redux到底到底做了什么**
+**上面分析了redux的主要功能，那么react-redux到底做了什么？**
 
 
 ## React-Redux
