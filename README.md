@@ -295,7 +295,7 @@ mapDispatchToProps返回的对象其属性其实就是一个个actionCreator，�
 
 其实connect并没有做什么，大部分的逻辑都是在它返回的wrapWithConnect函数内实现的，确切的说是在wrapWithConnect内定义的Connect组件里实现的。
 
-###下面是一个完整的流程：
+###下面是一个完整的 react --> redux --> react 流程：
 
 一、Provider组件接受redux的store作为props，然后通过context往下传。
 
