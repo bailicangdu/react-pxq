@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { is, fromJS} from 'immutable';
 import { Tool } from '../Config/Tool';
 import {Header, template} from './common/modules';
+import pureRender from 'pure-render-decorator';
 
-
-
+@pureRender
 class List extends Component {
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -29,6 +29,7 @@ class List extends Component {
     }
 }
 
+@pureRender
 class ListItem extends Component {
     constructor(props,context){
         super(props,context)
@@ -98,7 +99,12 @@ ListItem.contextTypes = {
     store:React.PropTypes.any
 }
 
+
+@pureRender
 class Main extends Component {
+    // static childContextTypes = {
+    //     recordState:React.PropTypes.any
+    // }
     constructor(props,context) {
         super(props,context);
         this.state = {
@@ -194,6 +200,7 @@ class Main extends Component {
         cancelAnimationFrame(this.state.requestID);
     }
     render() {
+        console.log(this.props)
         let MoveDiv = {position:'fixed',backgroundColor:'red',height:'100px',width:'100px',zIndex:99999,left:this.state.left,bottom:'0'};
         return (
             <div className="component_container">
@@ -206,7 +213,6 @@ class Main extends Component {
         );
     }
 }
-
 Main.childContextTypes = {
     recordState:React.PropTypes.any
 }
