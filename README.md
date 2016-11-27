@@ -328,15 +328,10 @@ connect可以写的非常简洁，mapStateToProps，mapDispatchToProps只不过�
 2、从 react.js，redux，react-router 中引入所需要的对象和方法。
 
 import React, {Component, PropTypes} from 'react';
-
 import ReactDOM, {render} from 'react-dom';
-
 import {Provider, connect} from 'react-redux';
-
 import {createStore, combineReducers, applyMiddleware} from 'redux';
-
 import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from 'react-router';
-
 
 3、根据需求创建顶层ui组件，每个顶层ui组件对应一个页面。
 
