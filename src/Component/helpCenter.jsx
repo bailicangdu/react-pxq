@@ -1,7 +1,8 @@
 import React, {Component, PropTypes} from 'react';
+import pureRender from 'pure-render-decorator';
 import { connect } from 'react-redux';
 import { is, fromJS} from 'immutable';
-import { Header,template} from './common/modules';
+import { Header,template} from './common/mixin';
 
 
 /**
@@ -11,6 +12,7 @@ import { Header,template} from './common/modules';
  * @class Main
  * @extends {Component}
  */
+@pureRender
 class Main extends Component {
     constructor(props) {
         super(props);
@@ -78,8 +80,7 @@ class Main extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
-        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
+        return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state),fromJS(nextState))
     }
     
     render() {

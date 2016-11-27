@@ -1,9 +1,11 @@
 import React, {Component, PropTypes} from 'react';
 import { Link, IndexLink } from 'react-router';
+import pureRender from 'pure-render-decorator';
 import { is, fromJS} from 'immutable';
 import { Tool } from '../../Config/Tool';
 import template from './template';
 export {template}
+
 /**
  * 公共头部
  *
@@ -12,6 +14,7 @@ export {template}
  * @extends {Component}
  */
 
+@pureRender
 export class Header extends Component {  //头部标题
      constructor(props,context) {
         super(props,context);
@@ -29,8 +32,7 @@ export class Header extends Component {  //头部标题
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
-        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
+        return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state),fromJS(nextState))
     }
     
     render() {

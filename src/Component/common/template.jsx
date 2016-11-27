@@ -1,7 +1,9 @@
 import React, {Component, PropTypes} from 'react';
+import pureRender from 'pure-render-decorator';
 import { connect } from 'react-redux';
 import { is, fromJS} from 'immutable';
 import *as action from '../../Redux/Action/Index';
+
 
 const Main = mySeting => {
     let seting = {
@@ -15,7 +17,7 @@ const Main = mySeting => {
         seting[key] = mySeting[key];
     }
 
-
+    @pureRender
     class Index extends Component {
         constructor(props,context) {
             super(props,context);
@@ -23,7 +25,6 @@ const Main = mySeting => {
         }
 
         render() {
-        
             return <this.props.seting.component {...this.props} state={this.props.state.toJS()}/>;
         }
 
@@ -39,7 +40,7 @@ const Main = mySeting => {
             if (nextProps.state.get('isFetching')) {
                 return false
             }
-            return !(this.props === nextProps || is(this.props, nextProps)) ||!(this.state === nextState || is(this.state, nextState));
+            return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state),fromJS(nextState))
         }
     }
 

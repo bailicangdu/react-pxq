@@ -1,15 +1,14 @@
 import React, {Component, PropTypes} from 'react';
+import pureRender from 'pure-render-decorator';
 import { connect } from 'react-redux';
 import { is, fromJS} from 'immutable';
 import {Tool} from '../Config/Tool';
-import {Header,template} from './common/modules';
+import {Header,template} from './common/mixin';
 
-
+@pureRender
 class List extends Component {
-
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
-        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
+        return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state),fromJS(nextState))
     }
 
     render() {
@@ -25,6 +24,7 @@ class List extends Component {
     }
 }
 
+@pureRender
 class ListItem extends Component {
     constructor(props,context) {
         super(props,context);
@@ -44,9 +44,8 @@ class ListItem extends Component {
         }
     }
 
-     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
-        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
+    shouldComponentUpdate(nextProps, nextState) {
+        return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state),fromJS(nextState))
     }
 
     render() {
@@ -105,6 +104,7 @@ ListItem.contextTypes = {
 };
 
 
+@pureRender
 class Main extends Component {
     constructor(props,context) {
         super(props,context);
@@ -202,8 +202,7 @@ class Main extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return !(this.props === nextProps || is(fromJS(this.props), fromJS(nextProps)))||
-        !(this.state === nextState || is(fromJS(this.state),fromJS(nextState)))
+        return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state),fromJS(nextState))
     }
     
     render() {
@@ -228,9 +227,11 @@ class Main extends Component {
         );
     }
 }
+
 Main.propTypes = {
     saleRecord:PropTypes.object.isRequired
 }
+
 Main.childContextTypes = {
     deleteItem: React.PropTypes.any,
     getData: React.PropTypes.any,
