@@ -314,3 +314,31 @@ mapDispatchToProps返回的对象其属性其实就是一个个actionCreator，�
 connect可以写的非常简洁，mapStateToProps，mapDispatchToProps只不过是传入的回调函数，connect函数在必要的时候会调用它们，名字不是固定的，甚至可以不写名字。
 
 简化版本：connect(state => state, action)(Component);
+
+
+##项目搭建
+
+上面说了react，react-router和redux的知识点。但是怎么样将它们整合起来，搭建一个完整的项目。
+
+1、先引用 react.js，redux，react-router 等基本文件，建议用npm安装，直接在文件中引用。
+
+2、从 react.js，redux，react-router 中引入所需要的对象和方法。
+
+import React, {Component, PropTypes} from 'react';
+import ReactDOM, {render} from 'react-dom';
+import {Provider, connect} from 'react-redux';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
+import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from 'react-router';
+
+
+3、根据需求创建顶层ui组件，每个顶层ui组件对应一个页面。
+
+4、创建actionCreators和reducers，并用combineReducers将所有的reducer合并成一个大的reduer。利用createStore创建store并引入combineReducers和applyMiddleware。
+
+5、利用connect将actionCreator，reuder和顶层的ui组件进行关联并返回一个新的组件。
+
+6、利用connect返回的新的组件配合react-router进行路由的部署，返回一个路由组件Router。
+
+7、将Router放入最顶层组件Provider，引入store作为Provider的属性。
+
+8、调用render渲染Provider组件且放入页面的标签中。
