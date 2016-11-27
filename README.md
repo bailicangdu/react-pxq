@@ -343,7 +343,7 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 
 8、调用render渲染Provider组件且放入页面的标签中。
 
-可以看到顶层的ui组件其实被套了四层组件，Provider，Router，Route，Connect，这四个并不会在视图上进行任何改变，它们只是功能性的。
+可以看到顶层的ui组件其实被套了四层组件，Provider，Router，Route，Connect，这四个组件并不会在视图上改变react，它们只是功能性的。
 
 我们在顶层的ui组件打印props时可以看到一堆属性：
 
