@@ -345,9 +345,9 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 
 可以看到顶层的ui组件其实被套了四层组件，Provider，Router，Route，Connect，这四个组件并不会在视图上改变react，它们只是功能性的。
 
-我们在顶层的ui组件打印props时可以看到一堆属性：
+通常我们在顶层的ui组件打印props时可以看到一堆属性：
 
-![](https://github.com/bailicangdu/pxq/blob/master/src/images/react_props.jpg)
+![](https://github.com/bailicangdu/pxq/blob/master/src/images/react_props.png)
 
 上图的顶层ui组件属性总共有18个，如果刚刚接触react，可能对这些属性怎么来的感到困惑，其实这些属性来自四个地方：
 
