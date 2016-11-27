@@ -354,4 +354,4 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 
 上图的顶层ui组件属性总共有18个，如果刚刚接触react，可能对这些属性怎么来的感到困惑，其实这些属性来自四个地方：
 
-组件自定义属性1个，actionCreator返回的对象6个，reducer返回的state4个，以及Router注入的属性7个，就这些，其实很简单，没什么神奇的。
+组件自定义属性1个，actionCreator返回的对象6个，reducer返回的state4个，以及Router注入的属性7个。
