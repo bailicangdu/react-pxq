@@ -20,6 +20,10 @@ react + redux + immutable + less + scss + ES6 + webpack + fetch + webpack-dev-se
  npm run dist （发布生产版本，对代码进行混淆压缩，提取公共代码，分离css文件）
 ```
 
+## 2016年10月26日
+```
+初次提交
+```
 
 ## 2016年11月14日
 ```
@@ -29,7 +33,6 @@ react + redux + immutable + less + scss + ES6 + webpack + fetch + webpack-dev-se
 ```
 添加immutable.js的使用，减少组件不必要的更新，优化性能
 ```
-
 
 
 #个人总结
