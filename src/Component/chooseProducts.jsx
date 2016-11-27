@@ -141,7 +141,7 @@ class Main extends Component {
                 this.getMove()
             })
         }
-       
+        
     }
 
     getChildContext(){

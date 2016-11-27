@@ -17,7 +17,7 @@ import './Style/applyRecord.less';
 
 
 store.subscribe(() => { //监听state变化
-    console.log(store)
+    //console.log(store)
 });
 
 render(
@@ -26,3 +26,4 @@ render(
     </Provider>,
     document.body.appendChild(document.createElement('div'))
 );
+

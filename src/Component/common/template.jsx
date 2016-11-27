@@ -23,7 +23,6 @@ const Main = mySeting => {
         }
 
         render() {
-            console.log(this.props)
             return <this.props.seting.component {...this.props} state={this.props.state.toJS()}/>;
         }
 

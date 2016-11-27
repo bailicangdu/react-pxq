@@ -5,7 +5,6 @@ import index from '../Component/index'; //销售录入
 
 class Roots extends Component {
     render() {
-        console.log(this.props)
         return (
             <div>{this.props.children}</div>
         );
