@@ -342,3 +342,13 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 7、将Router放入最顶层组件Provider，引入store作为Provider的属性。
 
 8、调用render渲染Provider组件且放入页面的标签中。
+
+可以看到顶层的ui组件其实被套了四层组件，Provider，Router，Route，Connect，这四个组件并不会在视图上改变react，它们只是功能性的。
+
+我们在顶层的ui组件打印props时可以看到一堆属性：
+
+![](https://github.com/bailicangdu/pxq/blob/master/src/images/react_props.jpg)
+
+上图的顶层ui组件属性总共有18个，如果刚刚接触react，可能对这些属性怎么来的感到困惑，其实这些属性来自四个地方：
+
+组件自定义属性1个，actionCreator返回的对象6个，reducer返回的state4个，以及Router注入的属性7个，就这些，其实很简单，没什么神奇的。
