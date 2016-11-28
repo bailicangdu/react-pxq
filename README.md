@@ -316,8 +316,10 @@ mapDispatchToProps返回的对象其属性其实就是一个个actionCreator，�
 
 connect可以写的非常简洁，mapStateToProps，mapDispatchToProps只不过是传入的回调函数，connect函数在必要的时候会调用它们，名字不是固定的，甚至可以不写名字。
 
-简化版本：connect(state => state, action)(Component);
-
+简化版本：
+```javascript
+connect(state => state, action)(Component);
+```
 
 ##项目搭建
 
