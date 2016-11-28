@@ -38,7 +38,7 @@ react + redux + immutable + less + scss + ES6 + webpack + fetch + webpack-dev-se
 #个人总结
 
 ##做React需要会什么？
-react的功能其实很单一，现有的框架，比如angular是一个大而全的框架，用了angular几乎就不需要用其他工具辅助配合，但是react就不一样了，他就负责ui渲染，想要做好一个项目，得会用redux来管理数据，还得会es6，webpack还得懂一点，要想提高性能，需要按需加载，immutable.js也得学一点，还有单元测试。。。。
+react的功能其实很单一，主要负责渲染的功能，现有的框架，比如angular是一个大而全的框架，用了angular几乎就不需要用其他工具辅助配合，但是react不一样，他只负责ui渲染，想要做好一个项目，往往需要其他库和工具的配合，比如用redux来管理数据，react-router管理路由，react已经全面拥抱es6，所以es6也得掌握，webpack就算是不会配置也要会用，要想提高性能，需要按需加载，immutable.js也得用上，还有单元测试。。。。
 
 
 ##React 是什么
