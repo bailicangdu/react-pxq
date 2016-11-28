@@ -273,12 +273,15 @@ store的三大功能：dispatch，subscribe，getState都不需要手动来写�
 
 **mapStateToProps(state, [ownProps])：**
 >mapStateToProps 接受两个参数，store的state和自定义的props，并返回一个新的对象，这个对象会作为props的一部分传入ui组件。我们可以根据组件所需要的数据自定义返回一个对象。ownProps的变化也会触发mapStateToProps
+
 ```javascript
 function mapStateToProps(state) {
    return { todos: state.todos };
 }
 ```
+
 **mapDispatchToProps(dispatch, [ownProps])：**
+
 > mapDispatchToProps如果是对象，那么会和store绑定作为props的一部分传入ui组件。如果是个函数，它接受两个参数，bindActionCreators会将action和dispatch绑定并返回一个对象，这个对象会和ownProps一起作为props的一部分传入ui组件。所以不论mapDispatchToProps是对象还是函数，它最终都会返回一个对象，如果是函数，这个对象的key值是可以自定义的
 ```javascript
 function mapDispatchToProps(dispatch) {
@@ -288,6 +291,7 @@ function mapDispatchToProps(dispatch) {
    };
 }
 ```
+
 mapDispatchToProps返回的对象其属性其实就是一个个actionCreator，因为已经和dispatch绑定，所以当调用actionCreator时会立即发送action，而不用手动dispatch。ownProps的变化也会触发mapDispatchToProps。
 
 **mergeProps(stateProps, dispatchProps, ownProps)：**
