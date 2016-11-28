@@ -283,6 +283,7 @@ function mapStateToProps(state) {
 **mapDispatchToProps(dispatch, [ownProps])：**
 
 > mapDispatchToProps如果是对象，那么会和store绑定作为props的一部分传入ui组件。如果是个函数，它接受两个参数，bindActionCreators会将action和dispatch绑定并返回一个对象，这个对象会和ownProps一起作为props的一部分传入ui组件。所以不论mapDispatchToProps是对象还是函数，它最终都会返回一个对象，如果是函数，这个对象的key值是可以自定义的
+
 ```javascript
 function mapDispatchToProps(dispatch) {
    return {
