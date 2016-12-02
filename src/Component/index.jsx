@@ -6,7 +6,7 @@ import { is, fromJS} from 'immutable';
 import {Tool} from '../Config/Tool';
 import {Header,template} from './common/mixin';
 
-@pureRender
+
 class Main extends Component {
     constructor() {
         super();

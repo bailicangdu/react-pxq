@@ -29,6 +29,13 @@ export const requestData = (state = {}, action = {}) => {
             action.success(action.json);
             state[action.name] = action.json;
             return state;
+        default:
+            return state;
+    }
+}
+
+export const testData = (state = {}, action = {}) => {
+    switch(action.type){
         case TEST_DISPATCH:
             return Object.assign({},state,action);
         default:

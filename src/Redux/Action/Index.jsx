@@ -122,4 +122,10 @@ export const getData = (path, postData, success, name) => {
 }
 
 
-
+//记录单个商品列表状态
+export const testAction = (data) => {
+    return{
+        type:TEST_DISPATCH,
+        data,
+    }
+}

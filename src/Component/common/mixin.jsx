@@ -14,7 +14,7 @@ export {template}
  * @extends {Component}
  */
 
-@pureRender
+
 export class Header extends Component {  //头部标题
      constructor(props,context) {
         super(props,context);

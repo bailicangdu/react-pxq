@@ -7,7 +7,7 @@ import {Tool} from '../Config/Tool';
 import {Header, template} from './common/mixin';
 
 
-@pureRender
+
 class Main extends Component {
     constructor(props) {
         super(props);

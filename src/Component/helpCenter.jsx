@@ -12,11 +12,10 @@ import { Header,template} from './common/mixin';
  * @class Main
  * @extends {Component}
  */
-@pureRender
+
 class Main extends Component {
     constructor(props) {
         super(props);
-        
         this.state = {
           toggleList:'none',  //右侧商品列表是否展示
           selected:{list1:'rule_active'}, // 当前选择的商品为选中状态

@@ -5,7 +5,7 @@ import { is, fromJS} from 'immutable';
 import {Tool} from '../Config/Tool';
 import {Header,template} from './common/mixin';
 
-@pureRender
+
 class List extends Component {
     shouldComponentUpdate(nextProps, nextState) {
         return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state),fromJS(nextState))
@@ -24,8 +24,12 @@ class List extends Component {
     }
 }
 
-@pureRender
+
 class ListItem extends Component {
+    static contextTypes = {
+        deleteItem: React.PropTypes.any
+    }
+
     constructor(props,context) {
         super(props,context);
         this.state = {
@@ -99,13 +103,18 @@ class ListItem extends Component {
     }
 }
 
-ListItem.contextTypes = {
-  deleteItem: React.PropTypes.any
-};
 
 
-@pureRender
 class Main extends Component {
+    static propTypes = {
+        saleRecord:PropTypes.object.isRequired
+    }
+
+    static childContextTypes = {
+        deleteItem: React.PropTypes.any,
+        getData: React.PropTypes.any,
+    }
+
     constructor(props,context) {
         super(props,context);
         this.state = {
@@ -228,14 +237,6 @@ class Main extends Component {
     }
 }
 
-Main.propTypes = {
-    saleRecord:PropTypes.object.isRequired
-}
-
-Main.childContextTypes = {
-    deleteItem: React.PropTypes.any,
-    getData: React.PropTypes.any,
-};
 
 export default template({
     id: 'saleRecord',  //应用关联使用的redux

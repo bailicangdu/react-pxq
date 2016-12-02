@@ -7,7 +7,7 @@ import {Tool} from '../Config/Tool';
 import {Header, template} from './common/mixin';
 
 
-@pureRender
+
 class List extends Component {
    shouldComponentUpdate(nextProps, nextState) {
         return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state),fromJS(nextState))
@@ -28,7 +28,7 @@ class List extends Component {
     }
 }
 
-@pureRender
+
 class ListItem extends Component {
     constructor(){
         super()
@@ -82,7 +82,7 @@ class ListItem extends Component {
 }
 
 
-@pureRender
+
 class DetailItem extends Component {
     shouldComponentUpdate(nextProps, nextState) {
         return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state),fromJS(nextState))
@@ -114,7 +114,7 @@ class DetailItem extends Component {
     }
 }
 
-@pureRender
+
 class Main extends Component {
     constructor(props) {
         super(props);

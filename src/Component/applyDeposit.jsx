@@ -14,7 +14,7 @@ import {Header, template} from './common/mixin';
  * @extends {Component}
  */
 
-@pureRender
+
 class Main extends Component {
     constructor(props) {
         super(props);
