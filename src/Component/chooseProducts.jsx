@@ -201,7 +201,7 @@ class Main extends Component {
         //console.log(this.props)
         let MoveDiv = {position:'fixed',backgroundColor:'red',height:'100px',width:'100px',zIndex:99999,left:this.state.left,bottom:'0'};
         return (
-            <div className="component_container" onClick = {() => {this.props.testAction(new Date())}}>
+            <div className="component_container">
                 <div style={MoveDiv} onClick={this.move}></div>
                 <Header goback title='销售商品' save params={this.state.params} />
                 {
