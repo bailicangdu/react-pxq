@@ -16,7 +16,7 @@ var server = new WebpackDevServer(webpack(config), {
 	inline: true,
 	progress: true,
 	stats: {
-		colors: true
+		colors: true,
 	},
 	proxy
 });

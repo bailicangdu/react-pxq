@@ -13,7 +13,7 @@ var server = new WebpackDevServer(webpack(config), {
 	publicPath: config.output.publicPath,
 	progress: true,
 	stats: {
-		colors: true
+		colors: true,
 	},
 	proxy
 });
