@@ -51,8 +51,7 @@ class Main extends Component {
     componentWillUpdate(nextProps, nextState) {
       if (this.props !== nextProps) {  //判断props是否更新，将不随状态改变而变化的变量放入此处，防止多次赋值
         let {data} = nextProps.state;
-        
-        if (data&&data.data&&data.data.data&&data.data.data[0]) {
+        if (data) {
           let newData = [];
           data.data.data.forEach((item,index) => {
             newData[index] = {};
@@ -124,5 +123,5 @@ class Main extends Component {
 export default template({
     id: 'helpCenter',  //应用关联使用的redux
     component: Main, //接收数据的组件入口
-    url: '/policy/policy/lists'
+    url: '/shopro/data/policylist.json'
 });

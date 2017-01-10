@@ -29,7 +29,9 @@ const Main = mySeting => {
         }
 
         componentDidMount() {//获取数据
-            this.props.fetchPosts(this.props.seting.url,this.props.seting.data);
+            if (this.props.seting.url) {
+                this.props.fetchPosts(this.props.seting.url,this.props.seting.data);
+            }
         }
 
         componentWillReceiveProps(nextProps) {

@@ -12,13 +12,15 @@ class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          allDeposit:0
+          allDeposit: 0  
         }
     }
     componentWillUpdate(nextProps, nextState) {
         if (this.props !== nextProps) {
             let {data} = nextProps.state;
-            this.state.allDeposit = data&&data.data&&data.data.data&&data.data.data.balance||0;
+            if (data&&data.data&&data.data.data) {
+                this.state.allDeposit = data.data.data.balance||0;
+            }
         }     
     }
 
@@ -45,5 +47,5 @@ class Main extends Component {
 export default template({
     id: 'allDeposit',  //应用关联使用的redux
     component: Main,
-    url: '/balance/balance/getBalance'
+    url: '/shopro/data/balance.json'
 });

@@ -19,10 +19,10 @@ class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          allDeposit:0,  //可提现总额
-          inputMoney:'',  //输入的金额
-          oldValue:'',  //上次输入的金额
-          inputLength:0,  //根据输入数字长短，改变输入框宽度
+          allDeposit: 0,  //可提现总额
+          inputMoney: '',  //输入的金额
+          oldValue: '',  //上次输入的金额
+          inputLength: 0,  //根据输入数字长短，改变输入框宽度
         }
 
         this.handleChange = (event) => {
@@ -60,9 +60,9 @@ class Main extends Component {
           }else if(inputMoney <= 0){
             Tool.alert('请输入提现金额')
           }else{
-            this.props.getData('/balance/balance/doBalance',{money:inputMoney},(res) => {
+            this.props.getData('/shopro/data/applysuccess.json',{money:inputMoney},(res) => {
                 if (res.http_code == 200) {
-                    Tool.alert('您的提现申请已提交成功！','款项将于5-7个工作日转入您的微信钱包');
+                    Tool.alert('非微信环境无法提现');
                     let deposit = this.state.allDeposit - inputMoney;
                     deposit = deposit.toString();
                     if (/\./gi.test(deposit)) {
@@ -75,7 +75,7 @@ class Main extends Component {
                       allDeposit:deposit
                     })
                 }else{
-                    Tool.alert(res.msg)
+                    Tool.alert(res.data.msg)
                 }
             },'applyRecord')
           }
@@ -84,7 +84,9 @@ class Main extends Component {
     componentWillUpdate(nextProps, nextState) {
         if (this.props !== nextProps) {
           let data = nextProps.state.data;
-          this.state.allDeposit = data&&data.data&&data.data.data&&data.data.data.balance||0;
+          if (data&&data.data&&data.data.data) {
+            this.state.allDeposit = data.data.data.balance||0;
+          }
         }     
     }
 
@@ -118,5 +120,5 @@ class Main extends Component {
 export default template({
     id: 'applyDeposit',  //应用关联使用的redux
     component: Main,
-    url: '/balance/balance/getBalance'
+    url: '/shopro/data/balance.json'
 });

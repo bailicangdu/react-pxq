@@ -137,7 +137,7 @@ class Main extends Component {
                 this.state.oldName = name;
                 this.state.choosedClass = {};
                 this.state.choosedClass[name] = 'team_choosed';
-                this.setState(this.state.choosedClass);
+                this.forceUpdate();
                 let type = '';
                 if (name == 'failed') {
                     type = 'FAILED';
@@ -146,7 +146,7 @@ class Main extends Component {
                 }else if(name == 'passed'){
                     type = 'PASS';
                 }
-                this.props.getData('/sales/sales/salesList',{page:1,type:type}, (res) => {
+                this.props.getData('/shopro/data/record.json',{page:1,type:type}, (res) => {
                     if (res.http_code == 200) {
                         this.setState({
                             data:res.data.data,
@@ -154,7 +154,7 @@ class Main extends Component {
                             totalPage:res.data.totalPage
                         })
                     }else{
-                        Tool.alert(res.msg)
+                        Tool.alert(res.data.msg)
                     }
                 }, 'changeType')
             }
@@ -199,9 +199,11 @@ class Main extends Component {
              this.deleteInform(nextProps.saleRecord.index)
         }else{
             let {data} = nextProps.state;
-            this.state.data = data&&data.data&&data.data.data||[];
-            this.state.currentPage = data&&data.data&&data.data.currentPage||1;
-            this.state.totalPage = data&&data.data&&data.data.totalPage||1;
+            if (data) {
+                this.state.data = data.data.data||[];
+                this.state.currentPage = data.data.currentPage||1;
+                this.state.totalPage = data.data.totalPage||1;
+            }
         }
 
     }
@@ -241,7 +243,7 @@ class Main extends Component {
 export default template({
     id: 'saleRecord',  //应用关联使用的redux
     component: Main, //接收数据的组件入口
-    url: '/sales/sales/salesList',
+    url: '/shopro/data/record.json',
     data: {
             page:1,
             type:'UNAUDIT'

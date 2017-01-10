@@ -5,8 +5,6 @@ const {target} = config;
 export const Tool = {};
 
 Tool.paramType = data => {
-    data['uid'] = '1';
-    data['token'] = 'pt';
     let paramArr = []; 
     let paramStr = ''; 
     for (let attr in data) {

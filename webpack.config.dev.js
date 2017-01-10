@@ -10,6 +10,7 @@ var APP_FILE = path.resolve(APP_PATH, 'app'); //根目录文件app.jsx地址
 var BUILD_PATH = path.resolve(ROOT_PATH, '/pxq/dist'); //发布文件所存放的目录
 
 module.exports = {
+    devtool: 'cheap-module-eval-source-map',
     entry: {
         app: APP_FILE
     },

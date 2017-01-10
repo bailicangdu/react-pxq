@@ -54,7 +54,6 @@ class ListItem extends Component {
     }
 
     render() {
-
         let {month,totalMoney,applyList,index} = this.props;
         let showList = this.state.showlist;
         if (!showList) {
@@ -129,11 +128,12 @@ class Main extends Component {
             let newDate = new Date()
             let nowTime = newDate.getFullYear()+'-'+(newDate.getMonth()+1);
             let data = nextProps.state.data;
-            if (data&&data.data&&data.data.balance_list) {
+            if (data&&data.data) {
                 let num = 0;
                 let inform = data.data.balance_list;
                 for(let key in inform){
                     this.state.recordList[num] = {};
+                    console.log(num)
                     if (key == nowTime) {
                         this.state.recordList[num]['month'] = '本月';
                     }else{
@@ -149,8 +149,8 @@ class Main extends Component {
                         this.state.recordList[num]['applyList'][index]['applyMoney'] = item.money;
                         this.state.recordList[num]['applyList'][index]['status'] = item.to_account_status;
                     })
+                    num++;
                 }
-                num++;
             }
         }     
     }
@@ -160,6 +160,7 @@ class Main extends Component {
     }
     
     render() {
+        console.log(this.state.recordList)
         return (
             <div className='apply_container component_container'>
                 <Header goback title='提现记录'/>
@@ -178,7 +179,7 @@ class Main extends Component {
 export default template({
     id: 'applyRecord',  //应用关联使用的redux
     component: Main, //接收数据的组件入口
-    url: '/balance/balance/lists',
+    url: '/shopro/data/applyrecord.json',
     data: () => { //发送给服务器的数据
         return {
            year:2016

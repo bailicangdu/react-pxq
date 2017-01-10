@@ -55,6 +55,7 @@ class Main extends Component {
 
         this.chooseImage = () => {
             let self = this;
+            Tool.alert('微信环境下才可选择图片');
             wx.chooseImage({
                 count: 1, // 默认9
                 sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
@@ -162,8 +163,8 @@ class Main extends Component {
             });
         }
 
-        this.props.getData('/core/wx/jssdk', {url: url}, successFun, 'jssdk');
-
+        //this.props.getData('/core/wx/jssdk', {url: url}, successFun, 'jssdk');
+        //获取微信签名，demo不需要
         wx.ready(() => {
             wx.hideOptionMenu();
         })    
@@ -251,6 +252,6 @@ class Main extends Component {
 export default template({
     id: 'index',  //应用关联使用的redux
     component: Main,//接收数据的组件入口
-    url: '/user/user/checkRegister'
+    url: ''
 });
 

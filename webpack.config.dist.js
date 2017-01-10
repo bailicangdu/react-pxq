@@ -71,7 +71,7 @@ module.exports = {
             filename: '../index.html', //生成的html存放路径，相对于 path
             template: './src/template/index.html', //html模板路径
             inject: 'body',
-            hash: false,
+            hash: true,
         }),
         new ExtractTextPlugin('[name].css'),
         //提取出来的样式和common.js会自动添加进发布模式的html文件中，原来的html没有

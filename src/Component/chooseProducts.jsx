@@ -198,11 +198,10 @@ class Main extends Component {
         cancelAnimationFrame(this.state.requestID);
     }
     render() {
-        //console.log(this.props)
         let MoveDiv = {position:'fixed',backgroundColor:'red',height:'100px',width:'100px',zIndex:99999,left:this.state.left,bottom:'0'};
         return (
             <div className="component_container">
-                <div style={MoveDiv} onClick={this.move}></div>
+                {/*<div style={MoveDiv} onClick={this.move}></div>*/}
                 <Header goback title='销售商品' save params={this.state.params} />
                 {
                   this.state.productList.length > 0 ? <List list={this.state.productList}/> : null
@@ -215,5 +214,5 @@ class Main extends Component {
 export default template({
     id: 'chooseProducts',  //应用关联使用的redux
     component: Main, //接收数据的组件入口
-    url: '/sales/sales/productList'
+    url: '/shopro/data/products.json'
 });

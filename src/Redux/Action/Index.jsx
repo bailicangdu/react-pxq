@@ -32,12 +32,15 @@ const receivePosts = (path, json) => {
     }
 }
 
+
+// 页面初次渲染时获取数据
 export const fetchPosts = (path, postData) => {
     let url = target + path + Tool.paramType(postData);
     return dispatch => {
         dispatch(requestPosts(postData));
         return fetch(url,{
-            mode: 'no-cors'
+            mode: 'cors',
+            "Content-Type": "application/json",
         })
         .then(response => {
             if (response.ok) {
@@ -85,7 +88,7 @@ export const deleteItem = index => {
     }
 }
 
-
+//开始获取数据
 const getDataStart = path => {
   return {
     type: GET_DATA_START,
@@ -93,7 +96,7 @@ const getDataStart = path => {
   }
 }
 
-
+//获取数据成功
 const getDataSuccess = (path, json, success, name) => {
   return {
     type: GET_DATA_SUCCESS,
@@ -104,6 +107,8 @@ const getDataSuccess = (path, json, success, name) => {
   }
 }
 
+
+//手动调用获取数据的aciton
 export const getData = (path, postData, success, name) => {
     let url = target + path + Tool.paramType(postData);
     return dispatch => {
@@ -113,7 +118,7 @@ export const getData = (path, postData, success, name) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            mode: 'no-cors'
+            mode: 'cors'
         })
         .then(response => response.json())
         .then(json => dispatch(getDataSuccess(path, json, success, name)))

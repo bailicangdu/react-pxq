@@ -11,10 +11,10 @@ var BUILD_PATH = path.resolve(ROOT_PATH, '/pxq/dist'); //发布文件所存放�
 
 
 module.exports = {
+    devtool: 'cheap-module-eval-source-map',
     entry: {
         app: [
-            'webpack-dev-server/client?http://localhost:8080',
-            'webpack/hot/only-dev-server',
+            'webpack-hot-middleware/client',
             APP_FILE
         ]
     },
@@ -28,7 +28,7 @@ module.exports = {
         loaders: [{
             test: /\.js$/,
             exclude: /^node_modules$/,
-            loader: 'babel',
+            loaders: ['react-hot', 'babel'],
             include: [APP_PATH]
         }, {
             test: /\.css$/,
@@ -59,7 +59,7 @@ module.exports = {
         }, {
             test: /\.jsx$/,
             exclude: /^node_modules$/,
-            loaders: ['jsx', 'babel'],
+            loaders: ['react-hot', 'jsx', 'babel'],
             include: [APP_PATH]
         }]
     },
