@@ -1,6 +1,9 @@
 ## 技术栈：
-react + redux + immutable + less + scss + ES6 + webpack + fetch + webpack-dev-server反向代理 + react-router按需加载 + react-transform热替换
+react + redux + immutable + less + scss + ES6 + webpack + fetch + react-router按需加载 + react-transform热替换 + webpack-dev-server + http-proxy-middleware
 
+## 说明
+
+项目地址只是测试地址，所有数据都是假的，只做为演示，所以有些功能不能使用。
 
 ## 下载
 
