@@ -18,7 +18,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }));
 
 //代理服务器
-app.use('/*/*', proxyMiddleware({
+app.use('/shopro', proxyMiddleware({
     target: 'http://dev.fe.ptdev.cn',
     changeOrigin: true,
 }))

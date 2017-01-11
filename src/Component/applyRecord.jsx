@@ -133,7 +133,6 @@ class Main extends Component {
                 let inform = data.data.balance_list;
                 for(let key in inform){
                     this.state.recordList[num] = {};
-                    console.log(num)
                     if (key == nowTime) {
                         this.state.recordList[num]['month'] = '本月';
                     }else{
@@ -160,7 +159,6 @@ class Main extends Component {
     }
     
     render() {
-        console.log(this.state.recordList)
         return (
             <div className='apply_container component_container'>
                 <Header goback title='提现记录'/>

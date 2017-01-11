@@ -54,8 +54,8 @@ class Main extends Component {
         }
 
         this.chooseImage = () => {
+            Tool.alert('测试环境无法获取微信签名');
             let self = this;
-            Tool.alert('微信环境下才可选择图片');
             wx.chooseImage({
                 count: 1, // 默认9
                 sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
@@ -163,7 +163,7 @@ class Main extends Component {
             });
         }
 
-        //this.props.getData('/core/wx/jssdk', {url: url}, successFun, 'jssdk');
+        //this.props.getData('core/wx/jssdkNotLogin', {url: url}, successFun, 'jssdk');
         //获取微信签名，demo不需要
         wx.ready(() => {
             wx.hideOptionMenu();
