@@ -1,6 +1,10 @@
 ## 技术栈：
-react + redux + immutable + less + scss + ES6 + webpack + fetch + webpack-dev-server反向代理 + react-router按需加载 + react-transform热替换
+react + redux + immutable + less + scss + ES6 + webpack + fetch + react-router按需加载 + react-transform热替换 + webpack-dev-server + http-proxy-middleware
 
+## 说明
+
+1、项目地址只是测试地址，所有数据都是假的，只做为演示，所以有些功能不能使用。
+2、less 和 scss 差不多，一般开发只选一种即可。
 
 ## 下载
 
@@ -33,7 +37,11 @@ react + redux + immutable + less + scss + ES6 + webpack + fetch + webpack-dev-se
 ```
 添加immutable.js的使用，减少组件不必要的更新，优化性能
 ```
-
+## 2017年1月10日
+```
+1、修复热替换无法正常使用的问题，使用 react-hot-loader 代替 react-transform
+2、热替换模式下使用 http-proxy-middleware 反向代理功能，解决跨域问题
+```
 
 # 个人总结
 
