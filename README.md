@@ -3,7 +3,8 @@ react + redux + immutable + less + scss + ES6 + webpack + fetch + react-router�
 
 ## 说明
 
-项目地址只是测试地址，所有数据都是假的，只做为演示，所以有些功能不能使用。
+1、项目地址只是测试地址，所有数据都是假的，只做为演示，所以有些功能不能使用。
+2、less 和 scss 差不多，一般开发只选一种即可。
 
 ## 下载
 
