@@ -1,12 +1,7 @@
 ## 技术栈：
 react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router按需加载 + react-transform热替换 + webpack-dev-server + http-proxy-middleware
 
-## 说明
-```
-1、项目地址只是测试地址，所有数据都是假的，只做为演示，所以有些功能不能使用。
-2、less 和 scss 差不多，一般开发只选一种即可。
-3、webpack-dev-server 和 http-proxy-middleware 都可以实现反向代理，用来解决跨域问题，个人觉得 http-proxy-middleware 更灵活。
-```
+
 ## 下载
 
  	git clone https://github.com/bailicangdu/pxq.git
