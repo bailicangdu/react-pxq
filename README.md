@@ -36,7 +36,7 @@ react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router
 ## 2017年1月10日
 ```
 1、修复热替换无法正常使用的问题，使用 react-hot-loader 代替 react-transform
-2、热替换模式下使用 http-proxy-middleware 反向代理功能，解决跨域问题
+2、热替换模式下使用 http-proxy-middleware 反向代理解决跨域问题
 ```
 
 # 个人总结
