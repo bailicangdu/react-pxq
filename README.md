@@ -369,4 +369,4 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 
 
 
-如果觉得不错，请star一下吧 😊
+如果觉得不错，请给个star吧 😊
