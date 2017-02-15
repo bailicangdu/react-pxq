@@ -8,7 +8,7 @@
 
 ## 演示
 
-http://dev.fe.ptdev.cn/pxq/[http://dev.fe.ptdev.cn/pxq/]
+[demo][http://dev.fe.ptdev.cn/pxq/]
 
 ## 技术栈：
 
