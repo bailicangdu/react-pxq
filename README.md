@@ -7,8 +7,6 @@
 
 
 ## 演示
-### pc端访问这里
-
 [demo](http://dev.fe.ptdev.cn/pxq/)（请用chrome的手机模式预览）
    
 ### 移动端扫描下方二维码
