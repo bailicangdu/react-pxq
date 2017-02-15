@@ -7,11 +7,11 @@
 
 
 ## 演示
-   ### pc端访问这里
-   [demo](http://dev.fe.ptdev.cn/pxq/)
+### pc端访问这里
+[demo](http://dev.fe.ptdev.cn/pxq/)
    
-   ### 移动端扫描下方二维码
-  ![](https://github.com/bailicangdu/pxq/blob/master/src/images/demo.png)
+### 移动端扫描下方二维码
+![](https://github.com/bailicangdu/pxq/blob/master/src/images/demo.png)
 
 ## 技术栈：
 
