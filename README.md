@@ -1,5 +1,11 @@
+## 首先
+
+>  本项目主要理解 react 和 redux 的原理，以及 react + redux 之间的配合方式
+
+如果觉得不错的话，欢迎 star frok 😊
 
 ## 技术栈：
+
 react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router按需加载 + react-transform热替换 + webpack-dev-server + http-proxy-middleware
 
 
