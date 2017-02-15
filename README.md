@@ -7,11 +7,11 @@
 
 
 ## 演示
-#### pc端访问这里
-请用chrome的手机模式预览
-[demo](http://dev.fe.ptdev.cn/pxq/)
+### pc端访问这里
+
+[demo](http://dev.fe.ptdev.cn/pxq/)（请用chrome的手机模式预览）
    
-#### 移动端扫描下方二维码
+### 移动端扫描下方二维码
 ![](https://github.com/bailicangdu/pxq/blob/master/src/images/demo.png)
 
 ## 技术栈：
