@@ -9,6 +9,7 @@
 ## 演示
 
 [demo](http://dev.fe.ptdev.cn/pxq/)
+![](https://github.com/bailicangdu/pxq/blob/master/src/images/demo.png)
 
 ## 技术栈：
 
