@@ -3,6 +3,13 @@
 
 >  * 如果觉得不错的话，欢迎 star frok 😊
 
+>  * 我的另外一个开源项目 vue2 + vuex 重写饿了么webapp 已经接近完成了，喜欢vue的朋友赶紧去看看。
+
+
+## 演示
+
+[http://dev.fe.ptdev.cn/pxq/][http://dev.fe.ptdev.cn/pxq/]
+
 ## 技术栈：
 
 react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router按需加载 + react-transform热替换 + webpack-dev-server + http-proxy-middleware
