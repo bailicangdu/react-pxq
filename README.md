@@ -1,7 +1,7 @@
 ## 前言
->  本项目主要理解 react 和 redux 的原理，以及 react + redux 之间的配合方式
+>  * 本项目主要理解 react 和 redux 的原理，以及 react + redux 之间的配合方式
 
->如果觉得不错的话，欢迎 star frok 😊
+>  * 如果觉得不错的话，欢迎 star frok 😊
 
 ## 技术栈：
 
@@ -371,7 +371,3 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 上图的顶层ui组件属性总共有18个，如果刚刚接触react，可能对这些属性怎么来的感到困惑，其实这些属性来自五个地方：
 
 组件自定义属性1个，actionCreator返回的对象6个，reducer返回的state4个，Connect组件属性0个，以及Router注入的属性7个。
-
-
-
-如果觉得不错，请star一下吧 😊
