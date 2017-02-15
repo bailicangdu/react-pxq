@@ -3,7 +3,7 @@
 
 >  * 如果觉得不错的话，欢迎 star frok 😊
 
->  * 我的另外一个开源项目 vue2 + vuex 重写饿了么webapp 已经接近完成了，喜欢vue的朋友赶紧去看看。[vue2-elm](https://github.com/bailicangdu/vue2-elm)
+>  * 我的另外一个开源项目 vue2 + vuex 重写饿了么webapp 已经接近完成了，喜欢vue的朋友赶紧去看看。[地址在这里](https://github.com/bailicangdu/vue2-elm)
 
 
 ## 演示
