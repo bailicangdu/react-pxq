@@ -369,15 +369,17 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 
 组件自定义属性1个，actionCreator返回的对象6个，reducer返回的state4个，Connect组件属性0个，以及Router注入的属性7个。
 
-## 结束
+# 结束
 >  本项目主要理解 react 和 redux 的原理，以及 react + redux 之间的配合方式
 
 >  如果觉得不错的话，请star一下吧 😊
 
+>  开发环境 macOS 10.12.3  Chrome 55
+
 >  我的另外一个开源项目 vue2 + vuex 重写饿了么webapp 已经接近完成了，喜欢vue的朋友赶紧去看看。[地址在这里](https://github.com/bailicangdu/vue2-elm)
 
 
-## 演示
+# 演示
 [demo](http://dev.fe.ptdev.cn/pxq/)（请用chrome的手机模式预览）
    
 ### 移动端扫描下方二维码
