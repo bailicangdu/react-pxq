@@ -376,7 +376,7 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 
 >  开发环境 macOS 10.12.3  Chrome 55
 
->  如有问题请直接在 Issues 中提问，或者可以加我的QQ 1264889788
+>  如有问题请直接在 Issues 中提问，或者可以加我的QQ 1264889788 (备注GitHub)
 
 >  我的另外一个开源项目 vue2 + vuex 重写饿了么webapp 已经接近完成了，喜欢vue的朋友赶紧去看看。[地址在这里](https://github.com/bailicangdu/vue2-elm)
 
