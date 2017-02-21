@@ -378,7 +378,7 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 
 >  如有问题请直接在 Issues 中提问，或者可以加我的QQ 1264889788 (备注GitHub)
 
->  推荐一个 vue2 + vuex 开源项目, 高度还原 饿了么App，喜欢vue2的朋友赶紧去看看。[地址在这里](https://github.com/bailicangdu/vue2-elm)
+>  推荐一个 vue2 + vuex 开源项目, 高度还原 饿了么App，比较复杂，喜欢vue2的朋友赶紧去看看。[地址在这里](https://github.com/bailicangdu/vue2-elm)
 
 >  另外一个 vue2 + vuex 的简单项目，非常适合入门练习。[地址在这里](https://github.com/bailicangdu/vue2-happyfri)
 
