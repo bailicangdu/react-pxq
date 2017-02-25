@@ -52,7 +52,7 @@ react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router
 
 >  开发环境 macOS 10.12.3  Chrome 55
 
->  如有问题请直接在 Issues 中提问，或者有react, vue相关的问题可以加我的QQ 1264889788，一起讨论，欢迎骚扰。
+>  如有问题请直接在 Issues 中提问，或者可以加我的QQ 1264889788
 
 >  如果觉得不错的话，请star一下吧 😊
 
