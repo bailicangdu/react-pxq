@@ -45,7 +45,8 @@ react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router
 
 
 
-# 总结
+## 说明
+
 >  本项目主要理解 react 和 redux 的原理，以及 react + redux 之间的配合方式
 
 >  如果觉得不错的话，请star一下吧 😊
@@ -59,7 +60,7 @@ react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router
 >  另外一个 vue2 + vuex 的简单项目，非常适合入门练习。[地址在这里](https://github.com/bailicangdu/vue2-happyfri)
 
 
-# 演示
+## 演示
 [demo](http://dev.fe.ptdev.cn/pxq/)（请用chrome的手机模式预览）
    
 ### 移动端扫描下方二维码
