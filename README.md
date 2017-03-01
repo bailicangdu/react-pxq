@@ -53,7 +53,7 @@ react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router
 
 >  如果觉得不错的话，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
 
->  或者您可以 "follow" 一下，因为我会不断开源更多的有趣的项目
+>  或者您可以 "follow" 一下，我会不断开源更多的有趣的项目
 
 >  开发环境 macOS 10.12.3  Chrome 55
 
