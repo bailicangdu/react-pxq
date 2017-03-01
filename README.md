@@ -53,6 +53,8 @@ react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router
 
 >  如果觉得不错的话，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
 
+>  或者您可以 "follow" 一下，因为我会不断开源更多的有趣的项目
+
 >  开发环境 macOS 10.12.3  Chrome 55
 
 >  推荐一个 vue2 + vuex 开源项目, 高度还原 饿了么App，比较复杂，喜欢vue2的朋友赶紧去看看。[地址在这里](https://github.com/bailicangdu/vue2-elm)
