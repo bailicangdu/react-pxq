@@ -57,7 +57,7 @@ react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router
 
 >  开发环境 macOS 10.12.3  Chrome 55
 
->  推荐一个 vue2 + vuex2 构建的 40 多个页面的大型开源项目，交互比较复杂。[地址在这里](https://github.com/bailicangdu/vue2-elm)
+>  推荐一个 vue2 + vuex 构建的 40 多个页面的大型开源项目，交互比较复杂。[地址在这里](https://github.com/bailicangdu/vue2-elm)
 
 >  另外一个 vue2 + vuex 的简单项目，非常适合入门练习。[地址在这里](https://github.com/bailicangdu/vue2-happyfri)
 
