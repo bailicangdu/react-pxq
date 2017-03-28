@@ -55,7 +55,7 @@ react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router
 
 >  如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
 
->  开发环境 macOS 10.12.3  Chrome 55
+>  开发环境 macOS 10.12.3  Chrome 56  nodejs 6.10.0
 
 >  推荐一个 vue2 + vuex 构建的 40 多个页面的大型开源项目，交互比较复杂。[地址在这里](https://github.com/bailicangdu/vue2-elm)
 
