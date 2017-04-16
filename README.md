@@ -1,7 +1,7 @@
 
 ## 技术栈：
 
-react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router按需加载 + react-transform热替换 + webpack-dev-server + http-proxy-middleware
+react + react-router + redux + immutable + less + ES6/7 + webpack + fetch
 
 
 ## 下载
