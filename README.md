@@ -1,7 +1,7 @@
 
 ## 技术栈：
 
-react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router按需加载 + react-transform热替换 + webpack-dev-server + http-proxy-middleware
+react + react-router + redux + immutable + less + ES6/7 + webpack + fetch
 
 
 ## 下载
@@ -10,17 +10,17 @@ react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router
 
  	cd pxq
 
- 	npm install 
+ 	npm install
 
 
 ## 运行（nodejs 6.0+）
 ```
- npm run dev (正常编译模式) 
+ npm run dev (正常编译模式)
 
  npm run hot (热替换编译模式)
 
  访问 http://localhost:8088
-  
+
  npm run dist （发布生产版本，对代码进行混淆压缩，提取公共代码，分离css文件）
 ```
 
@@ -55,16 +55,17 @@ react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router
 
 >  如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
 
->  开发环境 macOS 10.12.3  Chrome 55
+>  开发环境 macOS 10.12.3  Chrome 56  nodejs 6.10.0
 
->  推荐一个 vue2 + vuex 构建的 40 多个页面的大型开源项目，交互比较复杂。[地址在这里](https://github.com/bailicangdu/vue2-elm)
+>  推荐一个 vue2 + vuex 构建的 45 个页面的大型开源项目。[地址在这里](https://github.com/bailicangdu/vue2-elm)
 
 >  另外一个 vue2 + vuex 的简单项目，非常适合入门练习。[地址在这里](https://github.com/bailicangdu/vue2-happyfri)
 
 
 ## 演示
-[demo](http://cangdu.org/pxq/)（请用chrome的手机模式预览）
-   
+
+[查看演示效果](http://cangdu.org/pxq/)（请用chrome的手机模式预览）
+
 ### 移动端扫描下方二维码
 ![](https://github.com/bailicangdu/pxq/blob/master/src/images/demo.png)
 
@@ -73,7 +74,7 @@ react + redux + immutable + less + scss + ES6/7 + webpack + fetch + react-router
 
 # 个人感悟
 
-##做React需要会什么？
+## 做React需要会什么？
 react的功能其实很单一，主要负责渲染的功能，现有的框架，比如angular是一个大而全的框架，用了angular几乎就不需要用其他工具辅助配合，但是react不一样，他只负责ui渲染，想要做好一个项目，往往需要其他库和工具的配合，比如用redux来管理数据，react-router管理路由，react已经全面拥抱es6，所以es6也得掌握，webpack就算是不会配置也要会用，要想提高性能，需要按需加载，immutable.js也得用上，还有单元测试。。。。
 
 
@@ -117,7 +118,7 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
 
 **组件在初始化时会触发5个钩子函数：**
 
-  **1、getDefaultProps()** 
+  **1、getDefaultProps()**
 > 设置默认的props，也可以用dufaultProps设置组件的默认属性。
 
 
@@ -125,15 +126,15 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
 > 在使用es6的class语法时是没有这个钩子函数的，可以直接在constructor中定义this.state。此时可以访问this.props。
 
 
- **3、componentWillMount()** 
+ **3、componentWillMount()**
 > 组件初始化时只调用，以后组件更新不调用，整个生命周期只调用一次，此时可以修改state。
 
 
- **4、 render()** 
+ **4、 render()**
 >  react最重要的步骤，创建虚拟dom，进行diff算法，更新dom树都在此进行。此时就不能更改state了。
 
 
- **5、componentDidMount()** 
+ **5、componentDidMount()**
 > 组件渲染之后调用，可以通过this.getDOMNode()获取和操作dom节点，只调用一次。
 
 
@@ -143,11 +144,11 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
 > 组件初始化时不调用，组件接受新的props时调用。
 
 
-  **7、shouldComponentUpdate(nextProps, nextState)** 
+  **7、shouldComponentUpdate(nextProps, nextState)**
 > react性能优化非常重要的一环。组件接受新的state或者props时调用，我们可以设置在此对比前后两个props和state是否相同，如果相同则返回false阻止更新，因为相同的属性状态一定会生成相同的dom树，这样就不需要创造新的dom树和旧的dom树进行diff算法对比，节省大量性能，尤其是在dom结构复杂的时候。不过调用this.forceUpdate会跳过此步骤。
 
 
-  **8、componentWillUpdata(nextProps, nextState)**
+  **8、componentWillUpdate(nextProps, nextState)**
 > 组件初始化时不调用，只有在组件将要更新时才调用，此时可以修改state
 
 
@@ -161,7 +162,7 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
 
 还有一个卸载钩子函数
 
-  **11、componentWillUnmount()** 
+  **11、componentWillUnmount()**
 > 组件将要卸载时调用，一些事件监听和定时器需要在此时清除。
 
 
@@ -261,7 +262,7 @@ let unsubscribe = store.subscribe(() => {console.log('state发生了变化')})
 **3、getState：**
 > 获取store中的state——当我们用action触发reducer改变了state时，需要再拿到新的state里的数据，毕竟数据才是我们想要的。getState主要在两个地方需要用到，一是在dispatch拿到action后store需要用它来获取state里的数据，并把这个数据传给reducer，这个过程是自动执行的，二是在我们利用subscribe监听到state发生变化后调用它来获取新的state数据，如果做到这一步，说明我们已经成功了。
 
-**4、replaceReducer:** 
+**4、replaceReducer:**
 > 替换reducer，改变state修改的逻辑。
 
 store可以通过createStore()方法创建，接受三个参数，经过combineReducers合并的reducer和state的初始状态以及改变dispatch的中间件，后两个参数并不是必须的。store的主要作用是将action和reducer联系起来并改变state。
@@ -301,9 +302,9 @@ redux的state和react的state两者完全没有关系，除了名字一样。
 
 store的三大功能：dispatch，subscribe，getState都不需要手动来写了。react-redux帮我们做了这些，同时它提供了两个好基友Provider和connect。
 
-**Provider**是一个组件，它接受store作为props，然后通过context往下传，这样react中任何组件都可以通过contex获取store。也就意味着我们可以在任何一个组件里利用dispatch(action)来触发reducer改变state，并用subscribe监听state的变化，然后用getState获取变化后的值。但是并不推荐这样做，它会让数据流变的混乱，过度的耦合也会影响组件的复用，维护起来也更麻烦。
+**Provider**是一个组件，它接受store作为props，然后通过context往下传，这样react中任何组件都可以通过context获取store。也就意味着我们可以在任何一个组件里利用dispatch(action)来触发reducer改变state，并用subscribe监听state的变化，然后用getState获取变化后的值。但是并不推荐这样做，它会让数据流变的混乱，过度的耦合也会影响组件的复用，维护起来也更麻烦。
 
-**connect --connect(mapStateToProps, mapDispatchToProps, mergeProps, options)**是一个函数，它接受四个参数并且再返回一个函数--wrapWithConnect，wrapWithConnect接受一个组件作为参数wrapWithConnect(component)，它内部定义一个新组件Connect(容器组件)并将传入的组件(ui组件)作为Connect的子组件然后return出去。
+__connect --connect(mapStateToProps, mapDispatchToProps, mergeProps, options)__ 是一个函数，它接受四个参数并且再返回一个函数--wrapWithConnect，wrapWithConnect接受一个组件作为参数wrapWithConnect(component)，它内部定义一个新组件Connect(容器组件)并将传入的组件(ui组件)作为Connect的子组件然后return出去。
 
 所以它的完整写法是这样的：connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(component)
 
@@ -397,4 +398,3 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 上图的顶层ui组件属性总共有18个，如果刚刚接触react，可能对这些属性怎么来的感到困惑，其实这些属性来自五个地方：
 
 组件自定义属性1个，actionCreator返回的对象6个，reducer返回的state4个，Connect组件属性0个，以及Router注入的属性7个。
-
