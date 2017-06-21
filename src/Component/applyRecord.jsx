@@ -120,9 +120,11 @@ class Main extends Component {
         this.state = {
             recordList:[]
         }
-       
+        
     }
+    componentWillMount(){
 
+    }
     componentWillUpdate(nextProps, nextState) {
         if (this.props !== nextProps) {
             let newDate = new Date()
@@ -177,7 +179,7 @@ class Main extends Component {
 export default template({
     id: 'applyRecord',  //应用关联使用的redux
     component: Main, //接收数据的组件入口
-    url: '/shopro/data/applyrecord.json',
+    url: '/shopro/data/applyrecord',
     data: () => { //发送给服务器的数据
         return {
            year:2016

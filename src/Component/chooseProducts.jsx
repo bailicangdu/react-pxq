@@ -190,9 +190,6 @@ class Main extends Component {
         this.state.params = this.props.location.search;
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return !is(fromJS(this.props), fromJS(nextProps))||!is(fromJS(this.state),fromJS(nextState)) && (this.state.shouldUpdata || this.state.moving)
-    }
     
     componentWillUnmount(){
         cancelAnimationFrame(this.state.requestID);
@@ -214,5 +211,5 @@ class Main extends Component {
 export default template({
     id: 'chooseProducts',  //应用关联使用的redux
     component: Main, //接收数据的组件入口
-    url: '/shopro/data/products.json'
+    url: '/shopro/data/products'
 });

@@ -60,7 +60,7 @@ class Main extends Component {
           }else if(inputMoney <= 0){
             Tool.alert('请输入提现金额')
           }else{
-            this.props.getData('/shopro/data/applysuccess.json',{money:inputMoney},(res) => {
+            this.props.getData('/shopro/data/applysuccess',{money:inputMoney},(res) => {
                 if (res.http_code == 200) {
                     Tool.alert('您的提现申请已提交成功！','款项将于5-7个工作日转入您的微信钱包');
                     let deposit = this.state.allDeposit - inputMoney;
@@ -120,5 +120,5 @@ class Main extends Component {
 export default template({
     id: 'applyDeposit',  //应用关联使用的redux
     component: Main,
-    url: '/shopro/data/applybalance.json'
+    url: '/shopro/data/applybalance'
 });

@@ -47,5 +47,5 @@ class Main extends Component {
 export default template({
     id: 'allDeposit',  //应用关联使用的redux
     component: Main,
-    url: '/shopro/data/balance.json'
+    url: '/shopro/data/balance'
 });

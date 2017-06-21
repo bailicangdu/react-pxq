@@ -146,7 +146,7 @@ class Main extends Component {
                 }else if(name == 'passed'){
                     type = 'PASS';
                 }
-                this.props.getData('/shopro/data/record.json',{page:1,type:type}, (res) => {
+                this.props.getData('/shopro/data/record',{page:1,type:type}, (res) => {
                     if (res.http_code == 200) {
                         this.setState({
                             data:res.data.data,
@@ -212,10 +212,6 @@ class Main extends Component {
 
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state),fromJS(nextState))
-    }
-    
     render() {
         if (this.state.currentPage < this.state.totalPage) {
             Tool.nextPage(this.refs.Container,this.state.currentPage,this.state.totalPage,this.getNextPage,this.state.shouldUpdata)
@@ -243,7 +239,7 @@ class Main extends Component {
 export default template({
     id: 'saleRecord',  //应用关联使用的redux
     component: Main, //接收数据的组件入口
-    url: '/shopro/data/record.json',
+    url: '/shopro/data/record',
     data: {
             page:1,
             type:'UNAUDIT'

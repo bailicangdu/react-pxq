@@ -123,5 +123,5 @@ class Main extends Component {
 export default template({
     id: 'helpCenter',  //应用关联使用的redux
     component: Main, //接收数据的组件入口
-    url: '/shopro/data/policylist.json'
+    url: '/shopro/data/policylist'
 });
