@@ -2,7 +2,7 @@
   "name": "pxq",
   "version": "1.0.1",
   "description": "react-demo",
-  "main": "server.js",
+  "main": "index.html",
   "scripts": {
     "dev": "node server.js",
     "hot": "node server_hot.js",
