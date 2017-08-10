@@ -1,7 +1,7 @@
 {
   "name": "pxq",
   "version": "1.0.1",
-  "description": "react-demo",
+  "description": "react-pxq",
   "main": "index.html",
   "scripts": {
     "dev": "node server.js",
