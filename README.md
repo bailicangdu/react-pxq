@@ -24,26 +24,6 @@ react + react-router + redux + immutable + less + ES6/7 + webpack + fetch
  npm run dist （发布生产版本，对代码进行混淆压缩，提取公共代码，分离css文件）
 ```
 
-## 2016年10月26日
-```
-初次提交
-```
-
-## 2016年11月14日
-```
-新增热替换功能
-```
-## 2016年11月16日
-```
-添加immutable.js的使用，减少组件不必要的更新，优化性能
-```
-## 2017年1月10日
-```
-1、修复热替换无法正常使用的问题，使用 react-hot-loader 代替 react-transform
-2、热替换模式下使用 http-proxy-middleware 反向代理解决跨域问题
-```
-
-
 
 ## 说明
 
