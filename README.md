@@ -4,20 +4,16 @@
 react + react-router + redux + immutable + less + ES6/7 + webpack + fetch
 
 
-## 下载
-
- 	git clone https://github.com/bailicangdu/pxq.git
-
- 	cd react-pxq
-
- 	npm install
-
-
 ## 运行（nodejs 6.0+）
-```
- npm run dev (正常编译模式)
 
- npm run hot (热替换编译模式)
+```
+ git clone https://github.com/bailicangdu/react-pxq.git
+
+ cd react-pxq
+
+ npm install
+  
+ npm run dev (正常编译模式) 或 npm run hot (热替换编译模式) 二选其一
 
  访问 http://localhost:8088
 
