@@ -17,7 +17,7 @@ react + react-router + redux + immutable + less + ES6/7 + webpack + fetch
 
  访问 http://localhost:8088
 
- npm run dist （发布生产版本，对代码进行混淆压缩，提取公共代码，分离css文件）
+ npm run dist （发布）
 ```
 
 
