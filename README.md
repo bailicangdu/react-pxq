@@ -4,7 +4,7 @@
 react + react-router + redux + immutable + less + ES6/7 + webpack + fetch
 
 
-## 运行（nodejs 6.0+）
+## 运行项目（nodejs 6.0+）
 
 ```
  git clone https://github.com/bailicangdu/react-pxq.git
