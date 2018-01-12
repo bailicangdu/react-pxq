@@ -1,8 +1,18 @@
 
 ## 技术栈：
+```
+  react: v16.2
+  redux: v3.7
+  webpack: v3.8
+  react-router: v4.2
+  ES6/7/8
+  code split
+  hot loader
+  less: v2.7
+  axios: v0.17
+  immutable: v3.8
 
-react + react-router + redux + immutable + less + ES6/7 + webpack + fetch
-
+```
 
 ## 运行项目（nodejs 6.0+）
 
@@ -11,19 +21,17 @@ react + react-router + redux + immutable + less + ES6/7 + webpack + fetch
 
  cd react-pxq
 
- npm install
+ npm i
   
- npm run dev (正常编译模式) 或 npm run hot (热替换编译模式) 二选其一
+ npm start
 
- 访问 http://localhost:8088
-
- npm run dist （发布）
+ npm run build （发布）
 ```
 
 
 ## 说明
 
->  本项目主要理解 react 和 redux 的原理，以及 react + redux 之间的配合方式
+>  本项目主要用于理解 react 和 redux 的编译方式，以及 react + redux 之间的配合方式
 
 >  如果觉得不错的话，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
 
@@ -31,7 +39,7 @@ react + react-router + redux + immutable + less + ES6/7 + webpack + fetch
 
 >  如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
 
->  开发环境 macOS 10.12.3  Chrome 56  nodejs 6.10.0
+>  开发环境 macOS 10.13.1  Chrome 63  nodejs 8.9.1
 
 >  推荐一个 vue2 + vuex 构建的 45 个页面的大型开源项目。[地址在这里](https://github.com/bailicangdu/vue2-elm)
 
@@ -43,7 +51,7 @@ react + react-router + redux + immutable + less + ES6/7 + webpack + fetch
 [查看演示效果](http://cangdu.org/pxq/)（请用chrome的手机模式预览）
 
 ### 移动端扫描下方二维码
-![](https://github.com/bailicangdu/pxq/blob/master/src/images/demo.png)
+![](https://github.com/bailicangdu/pxq/blob/master/screenshot/demo.png)
 
 
 
@@ -68,7 +76,7 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
 
 对于列表的diff算法稍有不同，因为列表通常具有相同的结构，在对列表节点进行删除，插入，排序的时候，单个节点的整体操作远比一个个对比一个个替换要好得多，所以在创建列表的时候需要设置key值，这样react才能分清谁是谁。当然不写key值也可以，但这样通常会报出警告，通知我们加上key值以提高react的性能。
 
-![](https://github.com/bailicangdu/pxq/blob/master/src/images/diff.png)
+![](https://github.com/bailicangdu/pxq/blob/master/screenshot/diff.png)
 
 
 
@@ -77,7 +85,7 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
 
 组件的创造方法为React.createClass() ——创造一个类，react系统内部设计了一套类系统，利用它来创造react组件。但这并不是必须的，我们还可以用es6的class类来创造组件,这也是Facebook官方推荐的写法。
 
-![](https://github.com/bailicangdu/pxq/blob/master/src/images/icon_class.png)
+![](https://github.com/bailicangdu/pxq/blob/master/screenshot/icon_class.png)
 
 这两种写法实现的功能一样但是原理却是不同，es6的class类可以看作是构造函数的一个语法糖，可以把它当成构造函数来看，extends实现了类之间的继承 —— 定义一个类Main 继承React.Component所有的属性和方法，组件的生命周期函数就是从这来的。constructor是构造器，在实例化对象时调用，super调用了父类的constructor创造了父类的实例对象this，然后用子类的构造函数进行修改。这和es5的原型继承是不同的，原型继承是先创造一个实例化对象this，然后再继承父级的原型方法。了解了这些之后我们在看组件的时候就清楚很多。
 
@@ -90,7 +98,7 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
 
 ## 组件的生命周期
 
-![](https://github.com/bailicangdu/pxq/blob/master/src/images/react-lifecycle.png)
+![](https://github.com/bailicangdu/pxq/blob/master/screenshot/react-lifecycle.png)
 
 **组件在初始化时会触发5个钩子函数：**
 
@@ -207,7 +215,7 @@ react推崇的是单向数据流，自上而下进行数据的传递，但是由
 #### 流程是这个样子的：
 
 
-![](https://github.com/bailicangdu/pxq/blob/master/src/images/simple_redux.jpg)
+![](https://github.com/bailicangdu/pxq/blob/master/screenshot/simple_redux.jpg)
 
 值得注意的是connect，Provider，mapStateToProps,mapDispatchToProps是react-redux提供的，redux本身和react没有半毛钱关系，它只是数据处理中心，没有和react产生任何耦合，是react-redux让它们联系在一起。
 
@@ -217,7 +225,7 @@ react推崇的是单向数据流，自上而下进行数据的传递，但是由
 
 #### 先上一张图
 
-![](https://github.com/bailicangdu/pxq/blob/master/src/images/all_redux.png)
+![](https://github.com/bailicangdu/pxq/blob/master/screenshot/all_redux.png)
 
 明显比第一张要复杂，其实两张图说的是同一件事。从上而下慢慢分析：
 
@@ -369,7 +377,7 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 
 通常我们在顶层的ui组件打印props时可以看到一堆属性：
 
-![](https://github.com/bailicangdu/pxq/blob/master/src/images/react_props.png)
+![](https://github.com/bailicangdu/pxq/blob/master/screenshot/react_props.png)
 
 上图的顶层ui组件属性总共有18个，如果刚刚接触react，可能对这些属性怎么来的感到困惑，其实这些属性来自五个地方：
 

@@ -1,0 +1,71 @@
+@import (less, reference) "../../style/mixin.css";
+
+.home-container{
+  padding-top: 88px;
+  .common-title{
+    .font(36px, @base-color);
+    padding: 30px;
+  }
+  .home-form{
+    background-color: #fff;
+    .home-form-tiem{
+      height: 120px;
+      border-bottom: 1PX solid #eee;
+      span{
+        .font(32px, #555);
+        margin-left: 30px;
+        margin-right: 20px;
+      }
+      input{
+        border: none;
+        font-size: 30px;
+      }
+      ::-webkit-input-placeholder{ 
+        color: #ccc; 
+      }
+    }
+  }
+  .common-select-btn{
+    background-color: #fff;
+    display: block;
+    min-height: 120px;
+    .font(42px, #ccc, center);
+    .flex;
+    .selected-pro-list{
+      .flex();
+      flex-wrap: wrap;
+      .selected-pro-item{
+        width: 340px;
+        margin: 10px;
+        line-height: 50px;
+        .font(32px, @text-align:center);
+      }
+    }
+  }
+  .upload-img-con{
+    text-align: center;
+    .file-lable{
+      position: relative;
+      input[type='file']{
+        position: absolute;
+        .wh(100%, 100%);
+        background-color: red;
+        top: 0;
+        right: 0;
+        opacity: 0;
+      }
+    }
+    .select-img{
+      margin-top: 10px;
+    }
+  }
+
+  .submit-btn{
+    width: 90%;
+    background-color: @base-color;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    line-height: 100px;
+    .font(40px, #fff, center);
+  }
+}

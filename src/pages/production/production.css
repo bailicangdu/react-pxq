@@ -1,0 +1,45 @@
+@import (less, reference) "../../style/mixin.css";
+@import "../../assets/iconfonts/iconfont.css";
+
+.pro-list-con{
+  padding-top: @common-wd;
+}
+.pro-list-ul{
+  background-color: #fff;
+  .pro-item{
+    min-height: 140px;
+    padding: @common-wd;
+    border-bottom: 1PX solid #eee;
+    .flex(space-between);
+    .pro-item-select{
+      .flex;
+      .pro-select-status{
+        .font(45px, #ccc);
+      }
+      .pro-selected{
+        color: @base-color;
+      }
+      .pro-name{
+        .font(36px);
+        margin-left: 20px;
+        margin-top: 12px;
+      }
+    }
+    .pro-item-edit{
+      .flex;
+      .icon-jian{
+        .font(50px, #ccc);
+      }
+      .pro-num{
+        .font(30px, @text-align: center);
+        min-width: 60px;
+      }
+      .icon-jia{
+        .font(50px, @base-color);
+      }
+      .edit-active{
+        color: @base-color;
+      }
+    }
+  }
+}

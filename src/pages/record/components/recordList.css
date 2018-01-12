@@ -1,0 +1,32 @@
+@import (less, reference) "../../../style/mixin.css";
+
+.record-list-con{
+  .record-item{
+    background-color: #fff;
+    margin-top: 20px;
+    .record-item-header{
+      .flex(@justify-content: space-between);
+      height: 100px;
+      padding: 0 20px;
+      border-bottom: 1PX solid #eee;
+      span:nth-of-type(1){
+        .font(30px, #999); 
+      }
+      span:nth-of-type(2){
+        .font(36px, @base-red);
+      }
+    }
+    .record-item-content{
+      padding: 20px;
+      p{
+        .font(30px, #000);
+        line-height: 50px;
+      }
+    }
+    .record-item-footer{
+      padding: 20px;
+      .font(28px, #000);
+      border-top: 1PX solid #eee;
+    }
+  }
+}
