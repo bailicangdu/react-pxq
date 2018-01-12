@@ -1,18 +1,7 @@
 
 ## 技术栈：
-```
-  react: v16.2
-  redux: v3.7
-  webpack: v3.8
-  react-router: v4.2
-  ES6/7/8
-  code split
-  hot loader
-  less: v2.7
-  axios: v0.17
-  immutable: v3.8
+  react + redux + webpack + react-router + ES6/7/8 + immutable
 
-```
 
 ## 运行项目（nodejs 6.0+）
 
