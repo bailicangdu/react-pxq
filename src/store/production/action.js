@@ -39,4 +39,12 @@ export const editPro = (index, selectNum) => {
   }
 }
 
+// 清空选择
+export const clearSelected = () => {
+  return {
+    type: pro.CLEARSELECTED,
+  }
+}
+
+
 

@@ -36,7 +36,7 @@ class API extends Server{
    */
   async getRecord(params = {}){
     try{
-      let result = await this.axios('get', '/shopro/data/record', params); 
+      let result = await this.axios('get', `/shopro/data/record/${params.type}`); 
       if(result && (result.data instanceof Object) && result.http_code === 200){
         return result.data;
       }else{

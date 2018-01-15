@@ -39,6 +39,17 @@ export const proData = (state = defaultState, action) => {
       imuDataList = imuDataList.set(action.index, imuItem);
       // redux必须返回一个新的state
       return {...state, ...{dataList: imuDataList.toJS()}};
+    // 清空数据
+    case pro.CLEARSELECTED:
+      imuDataList = Immutable.fromJS(state.dataList);
+      for (let i = 0; i < state.dataList.length; i++) {
+        imuDataList = imuDataList.update(i, item => {
+          item = item.set('selectStatus', false);
+          item = item.set('selectNum', 0);
+          return item
+        })
+      }
+      return {...state, ...{dataList: imuDataList.toJS()}};
     default: 
       return state;
   }

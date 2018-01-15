@@ -5,7 +5,8 @@ import { is, fromJS } from 'immutable';
 import PropTypes from 'prop-types';
 import API from '@/api/api';
 import config from '@/config/config';
-import { saveFormData, saveImg } from '@/store/home/action';
+import { saveFormData, saveImg, clearData } from '@/store/home/action';
+import { clearSelected } from '@/store/production/action';
 import PublicHeader from '@/components/header/header';
 import PublicAlert from '@/components/alert/alert';
 import TouchableOpacity from '@/components/TouchableOpacity/TouchableOpacity';
@@ -18,6 +19,8 @@ class Home extends Component {
     formData: PropTypes.object.isRequired,
     saveFormData: PropTypes.func.isRequired,
     saveImg: PropTypes.func.isRequired,
+    clearData: PropTypes.func.isRequired,
+    clearSelected: PropTypes.func.isRequired,
   }
 
   state = {
@@ -78,6 +81,8 @@ class Home extends Component {
       alertTip = '请填写正确的手机号';
     }else{
       alertTip = '添加数据成功';
+      this.props.clearSelected();
+      this.props.clearData();
     }
     this.setState({
       alertStatus: true,
@@ -94,12 +99,19 @@ class Home extends Component {
   }
   
   // 初始化数据，获取已选择的商品
-  initData = () => {
-    this.props.proData.dataList.forEach(item => {
+  initData = props => {
+    this.selectedProList = [];
+    props.proData.dataList.forEach(item => {
       if(item.selectStatus && item.selectNum){
         this.selectedProList.push(item);
       }
     })
+  }
+
+  componentWillReceiveProps(nextProps){
+    if(!is(fromJS(this.props.proData), fromJS(nextProps.proData))){
+      this.initData(nextProps);
+    }
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -107,10 +119,12 @@ class Home extends Component {
   }
 
   componentWillMount(){
-    this.initData();
+    this.initData(this.props);
   }
+  
 
   render() {
+    
     return (
       <main className="home-container">
         <PublicHeader title='首页' record />
@@ -163,5 +177,7 @@ export default connect(state => ({
   proData: state.proData,
 }), {
   saveFormData, 
-  saveImg
+  saveImg,
+  clearData,
+  clearSelected,
 })(Home);
