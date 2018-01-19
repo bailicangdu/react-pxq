@@ -16,10 +16,10 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "start": "bin/react-scripts start",
-    "build": "bin/react-scripts build",
-    "test": "bin/react-scripts test --env=jsdom",
-    "eject": "bin/react-scripts eject"
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom",
+    "eject": "node scripts/eject.js"
   },
   "jest": {
     "collectCoverageFrom": [

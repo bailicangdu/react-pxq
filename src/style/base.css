@@ -5,7 +5,7 @@
   -webkit-tap-highlight-color: transparent;
   /*缩放网页，文字大小不变*/
   -webkit-text-size-adjust: none;
-  font-family: Arial,'Microsoft YaHei';
+  font-family: "Helvetica Neue",Helvetica,STHeiTi,sans-serif;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   font-weight: normal;
