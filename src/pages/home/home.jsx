@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { is, fromJS } from 'immutable';
 import PropTypes from 'prop-types';
 import API from '@/api/api';
-import config from '@/config/config';
+import envconfig from '@/envconfig/envconfig';
 import { saveFormData, saveImg, clearData } from '@/store/home/action';
 import { clearSelected } from '@/store/production/action';
 import PublicHeader from '@/components/header/header';
@@ -62,7 +62,7 @@ class Home extends Component {
       let formdata = new FormData();
       formdata.append('file', event.target.files[0]);
       let result = await API.uploadImg({data: formdata});
-      this.props.saveImg(config.imgUrl + result.image_path);
+      this.props.saveImg(envconfig.imgUrl + result.image_path);
       console.log(result);
     }catch(err){
       console.error(err);

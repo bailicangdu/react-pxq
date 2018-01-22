@@ -1,5 +1,5 @@
 import axios from 'axios';
-import config from '@/config/config';
+import envconfig from '@/envconfig/envconfig';
 /**
  * 主要params参数
  * @params method {string} 方法名
@@ -23,7 +23,7 @@ export default class Server {
       _option = {
         method,
         url,
-        baseURL: config.baseURL,
+        baseURL: envconfig.baseURL,
         timeout: 30000,
         params: null,
         data: null,
