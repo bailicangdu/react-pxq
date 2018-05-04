@@ -10,7 +10,7 @@
 
  cd react-pxq
 
- npm i
+ npm i  或者运行  yarn(推荐)
   
  npm start
 
