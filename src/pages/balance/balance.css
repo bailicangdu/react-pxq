@@ -1,0 +1,32 @@
+@import (less, reference) "../../style/mixin.css";
+
+
+.broke-main-content{
+  padding-top: @common-wd;
+  .broke-header{
+    .font(32px, #999);
+    padding: 0 @common-wd;
+  }
+  .broke-form{
+    background-color: #fff;
+    min-height: 250px;
+    margin-top: @common-wd;
+    .flex;
+    flex-direction: column;
+    p:nth-of-type(1){
+      .font(40px);
+    }
+    p:nth-of-type(2){
+      .font(40px);
+      ::-webkit-input-placeholder{ 
+        color: #ccc; 
+      }
+      margin-top: @common-wd;
+      input{
+        border: none;
+        .font(40px);
+        width: 180px;
+      }
+    }
+  }
+}

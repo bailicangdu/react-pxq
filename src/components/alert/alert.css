@@ -1,0 +1,41 @@
+@import (less, reference) "../../style/mixin.css";
+
+.alert-con{
+  .coverScreen(fixed, rgba(0, 0, 0, 0.3));
+  z-index: 11;
+}
+.alert-context{
+  .positionCenter;
+  z-index: 12;
+  .wh(600px, 360px);
+  background-color: #fff;
+  border-radius: 16px;
+  .flex(@align-items: stretch);
+  flex-direction: column;
+  .alert-content-detail{
+    flex: 5;
+    .flex;
+    .font(40px);
+  }
+  .confirm-btn{
+    flex: 2;
+    .flex;
+    .font(40px);
+    border-top: 1PX solid #eee;
+  }
+}
+.alert-enter{
+  opacity: 0;
+}
+.alert-enter.alert-enter-active{
+  transition: all 300ms;
+  opacity: 1;
+}
+
+.alert-leave{
+  opacity: 1;
+}
+.alert-leave.alert-leave-active{
+  transition: all 300ms;
+  opacity: 0;
+}
