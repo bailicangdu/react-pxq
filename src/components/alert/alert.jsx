@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { is, fromJS } from 'immutable';
 import TouchableOpacity from '@/components/TouchableOpacity/TouchableOpacity';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import './alert.css';
+import './alert.less';
 
 export default class Alert extends Component{
   static propTypes = {

@@ -3,7 +3,7 @@ import { is, fromJS } from 'immutable';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import './header.css';
+import './header.less';
 
 export default class PublicHeader extends Component{
   static propTypes = {
@@ -48,7 +48,7 @@ export default class PublicHeader extends Component{
             {
               this.state.navState && <aside key='nav-slide' className="nav-slide-list" onClick={this.toggleNav}>
                 <NavLink to="/" exact className="nav-link icon-jiantou-copy-copy">首页</NavLink>
-                <NavLink to="/brokerage" exact className="nav-link icon-jiantou-copy-copy">提现</NavLink>
+                <NavLink to="/balance" exact className="nav-link icon-jiantou-copy-copy">提现</NavLink>
                 <NavLink to="/helpcenter" exact className="nav-link icon-jiantou-copy-copy">帮助中心</NavLink>
               </aside>
             }
