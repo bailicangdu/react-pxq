@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.17.1",
+    "axios": ">=0.18.1",
     "fastclick": "^1.0.6",
     "immutable": "^3.8.2",
     "prop-types": "^15.6.0",
