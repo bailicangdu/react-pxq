@@ -41,7 +41,7 @@
 
 ### 移动端扫描下方二维码
 
-<img src="https://github.com/bailicangdu/pxq/blob/master/screenshot/demo.png" width="200" height="200"/>
+<img src="https://github.com/bailicangdu/pxq/blob/master/screenshot/demo1.png" width="200" height="200"/>
 
 
 
