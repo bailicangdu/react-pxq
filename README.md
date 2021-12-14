@@ -4,7 +4,6 @@
 
 
 ## 运行项目（nodejs 6.0+）
-
 ```
  git clone https://github.com/bailicangdu/react-pxq.git
 
